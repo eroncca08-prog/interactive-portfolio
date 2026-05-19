@@ -2,17 +2,18 @@
 
 import { ChangeEvent, FormEvent, KeyboardEvent, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowUp, Loader2 } from 'lucide-react'
+import { ArrowUp, Loader2, ArrowLeft } from 'lucide-react'
 
 interface ChatInputProps {
   input: string
   onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void
   onSubmit: (e: FormEvent) => void
+  onBack?: () => void
   isLoading: boolean
   hasMessages: boolean
 }
 
-export default function ChatInput({ input, onChange, onSubmit, isLoading, hasMessages }: ChatInputProps) {
+export default function ChatInput({ input, onChange, onSubmit, onBack, isLoading, hasMessages }: ChatInputProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   useEffect(() => {
@@ -35,6 +36,22 @@ export default function ChatInput({ input, onChange, onSubmit, isLoading, hasMes
 
   return (
     <div className="max-w-2xl mx-auto w-full">
+      {hasMessages && onBack && (
+        <motion.button
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          onClick={onBack}
+          className="flex items-center gap-2 mb-3 px-4 py-2 rounded-full text-sm font-semibold w-full justify-center"
+          style={{
+            background: 'rgba(0,229,255,0.1)',
+            border: '1.5px solid rgba(0,229,255,0.4)',
+            color: '#00e5ff',
+          }}
+        >
+          <ArrowLeft size={15} strokeWidth={2.5} />
+          Back to Home
+        </motion.button>
+      )}
       <form onSubmit={onSubmit}>
         <div
           className="flex items-end gap-2 rounded-2xl border px-4 py-3 transition-all duration-200 focus-within:border-cyan-400/40 focus-within:shadow-[0_0_0_1px_rgba(0,229,255,0.15)]"

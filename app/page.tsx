@@ -245,6 +245,7 @@ export default function Page() {
           input={input}
           onChange={handleInputChange}
           onSubmit={handleFormSubmit}
+          onBack={handleBack}
           isLoading={isLoading}
           hasMessages={hasMessages}
         />
