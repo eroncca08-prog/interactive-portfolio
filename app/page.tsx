@@ -211,6 +211,43 @@ export default function Page() {
                 </motion.p>
               </div>
 
+              {/* Stats */}
+              <motion.div
+                className="flex flex-wrap justify-center gap-3"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.42, duration: 0.4 }}
+              >
+                {[
+                  { value: '₱60M+', label: 'Property Sales' },
+                  { value: '200%', label: 'Quota Exceeded' },
+                  { value: 'Top 6', label: 'Consultant Rank' },
+                  { value: '5+ yrs', label: 'Experience' },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex flex-col items-center px-4 py-2.5 rounded-2xl"
+                    style={{
+                      background: 'rgba(0,229,255,0.06)',
+                      border: '1px solid rgba(0,229,255,0.18)',
+                    }}
+                  >
+                    <span
+                      className="text-xl font-bold tracking-tight"
+                      style={{ color: '#00e5ff' }}
+                    >
+                      {stat.value}
+                    </span>
+                    <span
+                      className="text-xs font-medium mt-0.5"
+                      style={{ color: 'var(--text-muted)' }}
+                    >
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </motion.div>
+
               {/* Suggestion chips */}
               <AnimatePresence>
                 {showSuggestions && (
