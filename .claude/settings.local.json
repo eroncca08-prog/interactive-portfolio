@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue | Select-Object -First 5 Name; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\" -ErrorAction SilentlyContinue | Select-Object Name; Get-ChildItem \"$env:LOCALAPPDATA\\\\nvm\" -ErrorAction SilentlyContinue | Select-Object Name)",
+      "PowerShell(where.exe node 2>$null; where.exe npm 2>$null; Get-ChildItem \"C:\\\\Program Files\" -ErrorAction SilentlyContinue | Where-Object {$_.Name -match 'node|nvm'} | Select-Object Name)",
+      "PowerShell(winget --version 2>$null; Get-ChildItem \"C:\\\\Users\\\\Admin\" -Depth 2 -ErrorAction SilentlyContinue | Where-Object { $_.Name -eq 'node.exe' } | Select-Object FullName)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --accept-package-agreements --accept-source-agreements)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('PATH', 'User'\\); node --version; npm --version)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('PATH', 'User'\\); Set-Location \"c:\\\\Users\\\\Admin\\\\Downloads\\\\Interactive Portfolio\"; npm install)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('PATH', 'User'\\); Set-Location \"c:\\\\Users\\\\Admin\\\\Downloads\\\\Interactive Portfolio\"; npm run dev)",
+      "PowerShell(where.exe ffmpeg 2>$null; $env:PATH = [System.Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('PATH', 'User'\\); where.exe ffmpeg 2>$null)",
+      "PowerShell(winget install Gyan.FFmpeg --accept-package-agreements --accept-source-agreements)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\('PATH', 'Machine'\\) + ';' + [System.Environment]::GetEnvironmentVariable\\('PATH', 'User'\\); Set-Location \"c:\\\\Users\\\\Admin\\\\Downloads\\\\Interactive Portfolio\"; ffprobe -v quiet -print_format json -show_streams \"eron ai nagalaw.mp4\" 2>&1 | Select-String -Pattern \"width|height|r_frame_rate|duration|nb_frames\" | Select-Object -First 10)"
+    ]
+  }
+}
