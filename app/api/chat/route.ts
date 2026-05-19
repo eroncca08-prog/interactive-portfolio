@@ -4,12 +4,21 @@ import { SYSTEM_PROMPT } from '@/lib/prompt'
 
 export const maxDuration = 30
 
-const groq = createOpenAI({
-  baseURL: 'https://api.groq.com/openai/v1',
-  apiKey: process.env.GROQ_API_KEY ?? '',
-})
-
 export async function POST(req: Request) {
+  const apiKey = process.env.GROQ_API_KEY ?? ''
+
+  if (!apiKey) {
+    return new Response(JSON.stringify({ error: 'GROQ_API_KEY not configured' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    })
+  }
+
+  const groq = createOpenAI({
+    baseURL: 'https://api.groq.com/openai/v1',
+    apiKey,
+  })
+
   try {
     const { messages } = await req.json()
 
@@ -21,7 +30,12 @@ export async function POST(req: Request) {
       maxTokens: 900,
     })
 
-    return result.toDataStreamResponse()
+    return result.toDataStreamResponse({
+      getErrorMessage: (err) => {
+        console.error('>>> Stream error:', err)
+        return err instanceof Error ? err.message : String(err)
+      },
+    })
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : String(err)
     console.error('>>> Route error:', message)
