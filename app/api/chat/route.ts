@@ -1,8 +1,13 @@
 import { streamText } from 'ai'
-import { groq } from '@ai-sdk/groq'
+import { createOpenAI } from '@ai-sdk/openai'
 import { SYSTEM_PROMPT } from '@/lib/prompt'
 
 export const maxDuration = 30
+
+const groq = createOpenAI({
+  baseURL: 'https://api.groq.com/openai/v1',
+  apiKey: process.env.GROQ_API_KEY ?? '',
+})
 
 export async function POST(req: Request) {
   try {
@@ -14,10 +19,6 @@ export async function POST(req: Request) {
       messages,
       temperature: 0.78,
       maxTokens: 900,
-      onError: ({ error }) => {
-        console.error('>>> Groq error:', JSON.stringify(error))
-        throw error
-      },
     })
 
     return result.toDataStreamResponse()
