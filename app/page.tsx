@@ -106,7 +106,44 @@ export default function Page() {
 
       {/* ── Navigation bar ── */}
       <nav className="flex items-center justify-between px-5 py-4 relative z-10 flex-shrink-0">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-3">
+          <AnimatePresence mode="popLayout">
+            {hasMessages ? (
+              <motion.button
+                key="back"
+                initial={{ opacity: 0, x: -16 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -16 }}
+                transition={{ duration: 0.22 }}
+                whileTap={{ scale: 0.93 }}
+                onClick={handleBack}
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold flex-shrink-0"
+                style={{
+                  background: 'rgba(0,229,255,0.14)',
+                  border: '1.5px solid rgba(0,229,255,0.45)',
+                  color: '#00e5ff',
+                  backdropFilter: 'blur(8px)',
+                  boxShadow: '0 0 12px rgba(0,229,255,0.15)',
+                }}
+              >
+                <ArrowLeft size={15} strokeWidth={2.5} />
+                Home
+              </motion.button>
+            ) : (
+              <motion.span
+                key="logo"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.18 }}
+                className="font-semibold text-sm tracking-tight"
+                style={{ color: 'var(--text-primary)' }}
+              >
+                eron.ai
+              </motion.span>
+            )}
+          </AnimatePresence>
+
           <AnimatePresence>
             {hasMessages && (
               <motion.div
@@ -120,36 +157,14 @@ export default function Page() {
               </motion.div>
             )}
           </AnimatePresence>
-          <span
-            className="font-semibold text-sm tracking-tight"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            eron.ai
-          </span>
         </div>
+
         <div className="flex items-center gap-3">
-          <AnimatePresence>
-            {hasMessages && (
-              <motion.button
-                initial={{ opacity: 0, scale: 0.85 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.85 }}
-                transition={{ duration: 0.2 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={handleBack}
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
-                style={{
-                  background: 'rgba(0,229,255,0.12)',
-                  border: '1px solid rgba(0,229,255,0.35)',
-                  color: '#00e5ff',
-                  backdropFilter: 'blur(8px)',
-                }}
-              >
-                <ArrowLeft size={15} strokeWidth={2.5} />
-                Home
-              </motion.button>
-            )}
-          </AnimatePresence>
+          {!hasMessages && (
+            <span
+              className="font-semibold text-sm tracking-tight hidden"
+            />
+          )}
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </div>
       </nav>
