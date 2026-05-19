@@ -85,13 +85,13 @@ const AchievementsGallery = memo(function AchievementsGallery() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
         className="relative w-full rounded-2xl overflow-hidden"
-        style={{ height: 200, border: '1px solid rgba(0,229,255,0.18)' }}
+        style={{ height: 240, border: '1px solid rgba(0,229,255,0.18)' }}
       >
         <img
           src="/screenshots/awards2.jpg"
           alt="Antel Land Digital Sales Award Ceremony"
           className="w-full h-full object-cover"
-          style={{ objectPosition: 'center 30%' }}
+          style={{ objectPosition: 'center center' }}
           draggable={false}
         />
         <div
@@ -125,7 +125,7 @@ const AchievementsGallery = memo(function AchievementsGallery() {
             transition={{ delay: 0.08 + i * 0.06, duration: 0.32 }}
             className="relative rounded-xl overflow-hidden"
             style={{
-              height: i === 0 ? 220 : 140,
+              height: i === 0 ? 280 : 170,
               border: `1px solid ${item.accent}28`,
               gridRow: i === 0 ? 'span 2' : undefined,
             }}
@@ -134,7 +134,7 @@ const AchievementsGallery = memo(function AchievementsGallery() {
               src={item.src}
               alt={item.label}
               className="w-full h-full object-cover"
-              style={{ objectPosition: 'center 20%' }}
+              style={{ objectPosition: 'center center' }}
               draggable={false}
             />
             <div
@@ -169,13 +169,13 @@ const AchievementsGallery = memo(function AchievementsGallery() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 + i * 0.07, duration: 0.3 }}
             className="relative rounded-xl overflow-hidden"
-            style={{ height: 110, border: `1px solid ${item.accent}28` }}
+            style={{ height: 140, border: `1px solid ${item.accent}28` }}
           >
             <img
               src={item.src}
               alt={item.label}
               className="w-full h-full object-cover"
-              style={{ objectPosition: 'center 15%' }}
+              style={{ objectPosition: 'center center' }}
               draggable={false}
             />
             <div
