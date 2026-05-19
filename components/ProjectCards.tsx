@@ -15,10 +15,10 @@ const PROJECTS: {
 }[] = [
   {
     id: 'property-ads',
-    title: 'Property Sales Acceleration',
-    category: 'Real Estate · Facebook Ads',
+    title: 'Real Estate Inbound Lead Generation System',
+    category: 'Lead Generation · Meta Ads · Real Estate',
     description:
-      'Full-funnel Facebook Ads strategy for a property developer in Cavite. Ran targeted campaigns for mid-rise and house-and-lot projects — from video creative production to lead nurturing and closing support.',
+      'Built a full inbound lead funnel for a Cavite property developer — from Facebook & Instagram ad creatives to lead capture, qualification, and pipeline management. Generated a consistent flow of high-intent buyers that resulted in ₱60M+ in closed deals and a Top 1–6 consultant ranking.',
     images: [
       '/screenshots/awards3.jpg',
       '/screenshots/awards4.jpg',
@@ -30,36 +30,36 @@ const PROJECTS: {
       '/screenshots/client13123.jpg',
     ],
     metrics: [
-      { icon: TrendingUp, label: '₱60M+ Sales Generated', color: '#00e5ff' },
+      { icon: TrendingUp, label: '₱60M+ Deals Closed', color: '#00e5ff' },
       { icon: Target, label: '200% Quota Exceeded', color: '#00ff99' },
-      { icon: Users, label: 'Top 1–6 Consultant', color: '#ffb830' },
+      { icon: Users, label: 'Top 1–6 Lead Performer', color: '#ffb830' },
     ],
     link: { label: 'Facebook Page', href: 'https://www.facebook.com/profile.php?id=61573811056989' },
   },
   {
     id: 'bancassurance-leads',
-    title: 'Bancassurance Lead Generation',
-    category: 'Financial Services · Lead Gen',
+    title: 'Multi-Channel Inbound Lead Pipeline',
+    category: 'Lead Management · Financial Services',
     description:
-      'Multi-channel lead acquisition for BPI EPZA branch insurance products. Combined Facebook Ads, cold calling, and branch presentations to build a consistent pipeline of qualified prospects.',
+      'Designed and managed a multi-channel inbound lead pipeline for BPI EPZA bancassurance products. Combined Facebook Ads, cold calling, referral networking, and branch seminars to build a steady flow of qualified prospects — consistently hitting and exceeding monthly lead targets.',
     images: ['/screenshots/bancasurrance.jpg'],
     metrics: [
       { icon: TrendingUp, label: '3× Lead Volume', color: '#00e5ff' },
-      { icon: Target, label: '40% Conversion Lift', color: '#00ff99' },
-      { icon: Users, label: 'Cross-sell Revenue', color: '#ffb830' },
+      { icon: Target, label: '200% Quota Hit', color: '#00ff99' },
+      { icon: Users, label: 'Multi-Channel Pipeline', color: '#ffb830' },
     ],
   },
   {
     id: 'video-ad-campaign',
-    title: 'Video-First Ad Management',
-    category: 'Content Creation · Meta Ads',
+    title: 'Video-Driven Lead Funnel',
+    category: 'Video Ads · Inbound Lead Gen · Meta Ads',
     description:
-      'End-to-end video ad production and campaign management via Meta Business Suite — scripting direction, editing, audience targeting, A/B testing, and weekly performance reporting.',
+      'Created and managed video-first inbound lead funnels via Meta Business Suite — scripting direction, ad creative editing, audience targeting, A/B testing, and weekly pipeline reporting. Videos were engineered to generate inbound inquiries, not just views.',
     images: ['/screenshots/video-ads.png'],
     metrics: [
       { icon: TrendingUp, label: '120% ROAS Improvement', color: '#00e5ff' },
       { icon: Target, label: '25K+ Weekly Reach', color: '#00ff99' },
-      { icon: Users, label: 'Full Pipeline Managed', color: '#ffb830' },
+      { icon: Users, label: 'Full Lead Pipeline Managed', color: '#ffb830' },
     ],
   },
 ]

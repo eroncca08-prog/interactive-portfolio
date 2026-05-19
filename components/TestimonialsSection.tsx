@@ -4,23 +4,23 @@ import { motion } from 'framer-motion'
 
 const TESTIMONIALS = [
   {
-    quote: "Eron's Facebook Ads strategy was a game-changer for our projects. His campaigns consistently brought in high-intent buyers — he closed over ₱60M in properties in just a few months.",
+    quote: "Eron built our entire inbound lead system from scratch — Facebook Ads, follow-up flow, everything. Within months we had a consistent pipeline of qualified buyers and closed over ₱60M in property sales.",
     name: 'Ramon Villanueva',
     role: 'Property Developer · Cavite',
     initials: 'RV',
     color: '#00e5ff',
   },
   {
-    quote: "He exceeded every bancassurance target we set — 200% quota in his first quarter. His prospecting and follow-through are unlike any other sales rep I've managed.",
+    quote: "He doesn't just run ads — he manages the full lead pipeline. Every prospect was properly qualified and followed up. Our bancassurance conversions hit 200% of target under his lead management.",
     name: 'Cristina Reyes',
     role: 'Branch Manager · BPI EPZA',
     initials: 'CR',
     color: '#00ff99',
   },
   {
-    quote: "His video ads are high quality and convert really well. ROAS improved significantly within weeks. If you need someone who understands both content and media buying, Eron is your guy.",
+    quote: "Eron's video ad funnels brought in real inbound leads — not just impressions. ROAS improved significantly and we had a steady stream of warm prospects ready to talk. Highly recommended.",
     name: 'Mark Aquino',
-    role: 'E-commerce Business Owner',
+    role: 'Business Owner · E-commerce',
     initials: 'MA',
     color: '#ffb830',
   },
@@ -47,7 +47,6 @@ export default function TestimonialsSection() {
             border: '1px solid var(--border)',
           }}
         >
-          {/* Stars */}
           <div className="flex gap-0.5">
             {Array.from({ length: 5 }).map((_, s) => (
               <svg key={s} width="12" height="12" viewBox="0 0 24 24" fill="#ffb830">

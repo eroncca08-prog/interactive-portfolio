@@ -16,10 +16,10 @@ import { ArrowLeft, Play, CalendarDays } from 'lucide-react'
 const MouseEffect = dynamic(() => import('@/components/MouseEffect'), { ssr: false })
 
 const SUGGESTIONS = [
-  { label: 'Show me your projects', icon: '🚀' },
-  { label: 'What are your top skills?', icon: '⚡' },
-  { label: 'How can we collaborate?', icon: '🤝' },
-  { label: 'Tell me a fun fact about you', icon: '✨' },
+  { label: 'How do you generate leads?', icon: '🎯' },
+  { label: 'Show me your results', icon: '📈' },
+  { label: 'What services do you offer?', icon: '⚡' },
+  { label: 'How can you help my business?', icon: '🤝' },
 ]
 
 const PROJECT_KEYWORDS = ['project', 'portfolio', 'work', 'campaign', 'case study', 'showcase']
