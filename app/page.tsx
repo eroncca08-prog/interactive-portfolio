@@ -16,8 +16,8 @@ import { ArrowLeft, Play, CalendarDays } from 'lucide-react'
 const MouseEffect = dynamic(() => import('@/components/MouseEffect'), { ssr: false })
 
 const SUGGESTIONS = [
-  { label: 'How do you generate leads?', icon: '🎯' },
   { label: 'Show me your results', icon: '📈' },
+  { label: 'How do you generate leads?', icon: '🎯' },
   { label: 'What services do you offer?', icon: '⚡' },
   { label: 'How can you help my business?', icon: '🤝' },
 ]
