@@ -229,7 +229,7 @@ export default function Page() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.28, duration: 0.38 }}
                 >
-                  Lead Generation & Inbound Lead Manager — ₱60M+ in deals closed.
+                  I build lead systems that close deals — ₱60M+ in results, 35K+ leads generated.
                 </motion.p>
                 <motion.div
                   className="flex items-center justify-center gap-2"
@@ -255,9 +255,9 @@ export default function Page() {
                 transition={{ delay: 0.42, duration: 0.4 }}
               >
                 {[
-                  { value: '₱60M+', label: 'Property Sales' },
-                  { value: '200%', label: 'Quota Exceeded' },
-                  { value: '5+ yrs', label: 'Experience' },
+                  { value: '₱60M+', label: 'Deals Closed' },
+                  { value: '35K+', label: 'Leads Generated' },
+                  { value: '2.07M', label: 'People Reached' },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -292,7 +292,9 @@ export default function Page() {
 
               {/* CTA */}
               <motion.a
-                href="mailto:eroncca08@gmail.com?subject=Let's%20Work%20Together"
+                href="https://wa.me/639559413969?text=Hi%20Eron!%20I%20saw%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you."
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.35 }}
