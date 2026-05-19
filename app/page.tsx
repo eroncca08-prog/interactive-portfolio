@@ -23,12 +23,14 @@ const SUGGESTIONS = [
 ]
 
 const PROJECT_KEYWORDS = ['project', 'portfolio', 'work', 'campaign', 'case study', 'showcase']
+const ACHIEVEMENT_KEYWORDS = ['result', 'achievement', 'award', 'recognition', 'photo', 'picture', 'proof']
 
 export default function Page() {
   const [theme, setTheme] = useState<'dark' | 'light'>('light')
   const [avatarState, setAvatarState] = useState<AvatarState>('idle')
   const [showSuggestions, setShowSuggestions] = useState(true)
   const [showProjects, setShowProjects] = useState(false)
+  const [showAchievements, setShowAchievements] = useState(false)
   const wasLoadingRef = useRef(false)
 
   const { messages, setMessages, input, handleInputChange, handleSubmit, isLoading, append } = useChat({
@@ -39,6 +41,7 @@ export default function Page() {
     setMessages([])
     setShowSuggestions(true)
     setShowProjects(false)
+    setShowAchievements(false)
     setAvatarState('idle')
     wasLoadingRef.current = false
   }, [setMessages])
@@ -65,13 +68,16 @@ export default function Page() {
     }
   }, [isLoading])
 
-  // Show project cards when user asks about projects
+  // Show project cards or achievements based on user message
   useEffect(() => {
     const lastUser = [...messages].reverse().find((m) => m.role === 'user')
     if (lastUser) {
       const lower = lastUser.content.toLowerCase()
       if (PROJECT_KEYWORDS.some((kw) => lower.includes(kw))) {
         setShowProjects(true)
+      }
+      if (ACHIEVEMENT_KEYWORDS.some((kw) => lower.includes(kw))) {
+        setShowAchievements(true)
       }
     }
   }, [messages])
@@ -320,6 +326,7 @@ export default function Page() {
                 messages={messages}
                 isLoading={isLoading}
                 showProjects={showProjects}
+                showAchievements={showAchievements}
               />
             </motion.div>
           )}

@@ -5,14 +5,16 @@ import { motion, AnimatePresence } from 'framer-motion'
 import type { Message } from 'ai'
 import MessageBubble from './MessageBubble'
 import ProjectCards from './ProjectCards'
+import AchievementsGallery from './AchievementsGallery'
 
 interface MessageListProps {
   messages: Message[]
   isLoading: boolean
   showProjects: boolean
+  showAchievements: boolean
 }
 
-export default function MessageList({ messages, isLoading, showProjects }: MessageListProps) {
+export default function MessageList({ messages, isLoading, showProjects, showAchievements }: MessageListProps) {
   const bottomRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -41,6 +43,17 @@ export default function MessageList({ messages, isLoading, showProjects }: Messa
                 className="mt-5 ml-9"
               >
                 <ProjectCards />
+              </motion.div>
+            )}
+
+            {showAchievements && message.role === 'assistant' && index === lastAiIndex && !isLoading && (
+              <motion.div
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.45, duration: 0.35 }}
+                className="mt-5 ml-9"
+              >
+                <AchievementsGallery />
               </motion.div>
             )}
           </motion.div>
