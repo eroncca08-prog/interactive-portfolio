@@ -10,6 +10,7 @@ import MessageList from '@/components/MessageList'
 import ChatInput from '@/components/ChatInput'
 import ThemeToggle from '@/components/ThemeToggle'
 import ContactBar from '@/components/ContactBar'
+import { ArrowLeft } from 'lucide-react'
 
 const MouseEffect = dynamic(() => import('@/components/MouseEffect'), { ssr: false })
 
@@ -29,9 +30,17 @@ export default function Page() {
   const [showProjects, setShowProjects] = useState(false)
   const wasLoadingRef = useRef(false)
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, append } = useChat({
+  const { messages, setMessages, input, handleInputChange, handleSubmit, isLoading, append } = useChat({
     api: '/api/chat',
   })
+
+  const handleBack = useCallback(() => {
+    setMessages([])
+    setShowSuggestions(true)
+    setShowProjects(false)
+    setAvatarState('idle')
+    wasLoadingRef.current = false
+  }, [setMessages])
 
   const hasMessages = messages.length > 0
 
@@ -118,7 +127,39 @@ export default function Page() {
             eron.ai
           </span>
         </div>
-        <ThemeToggle theme={theme} onToggle={toggleTheme} />
+        <div className="flex items-center gap-3">
+          <AnimatePresence>
+            {hasMessages && (
+              <motion.button
+                initial={{ opacity: 0, x: 10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 10 }}
+                transition={{ duration: 0.2 }}
+                onClick={handleBack}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all active:scale-95"
+                style={{
+                  color: 'var(--text-muted)',
+                  border: '1px solid var(--border)',
+                  background: 'transparent',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#00e5ff'
+                  e.currentTarget.style.borderColor = 'rgba(0,229,255,0.4)'
+                  e.currentTarget.style.background = 'rgba(0,229,255,0.06)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'var(--text-muted)'
+                  e.currentTarget.style.borderColor = 'var(--border)'
+                  e.currentTarget.style.background = 'transparent'
+                }}
+              >
+                <ArrowLeft size={13} strokeWidth={2} />
+                Home
+              </motion.button>
+            )}
+          </AnimatePresence>
+          <ThemeToggle theme={theme} onToggle={toggleTheme} />
+        </div>
       </nav>
 
       {/* ── Main content ── */}
