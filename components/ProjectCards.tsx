@@ -190,8 +190,15 @@ const ProjectCards = memo(function ProjectCards() {
 
             {/* Content */}
             <div className="px-4 pb-4 pt-1 space-y-2.5">
+              {/* Big result headline */}
+              <div
+                className="text-xl font-bold tracking-tight"
+                style={{ color: project.metrics[0].color }}
+              >
+                {project.metrics[0].label}
+              </div>
               <h3
-                className="font-semibold text-sm tracking-tight"
+                className="font-semibold text-sm tracking-tight -mt-1"
                 style={{ color: 'var(--text-primary)' }}
               >
                 {project.title}

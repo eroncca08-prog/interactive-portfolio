@@ -10,7 +10,8 @@ import MessageList from '@/components/MessageList'
 import ChatInput from '@/components/ChatInput'
 import ThemeToggle from '@/components/ThemeToggle'
 import ContactBar from '@/components/ContactBar'
-import { ArrowLeft } from 'lucide-react'
+import TestimonialsSection from '@/components/TestimonialsSection'
+import { ArrowLeft, Play, CalendarDays } from 'lucide-react'
 
 const MouseEffect = dynamic(() => import('@/components/MouseEffect'), { ssr: false })
 
@@ -179,18 +180,33 @@ export default function Page() {
               className="flex-1 flex flex-col items-center justify-center text-center px-4 gap-7"
               exit={{ opacity: 0, y: -24, transition: { duration: 0.25 } }}
             >
-              {/* Avatar */}
+              {/* Avatar + video button */}
               <motion.div
-                className="w-44 h-44"
+                className="relative w-44 h-44"
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
                 <Avatar state={avatarState} className="w-44 h-44" />
+                <a
+                  href="https://www.facebook.com/profile.php?id=61573811056989"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap"
+                  style={{
+                    background: 'rgba(0,0,0,0.75)',
+                    border: '1px solid rgba(0,229,255,0.35)',
+                    color: '#00e5ff',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <Play size={10} fill="#00e5ff" strokeWidth={0} />
+                  Watch my work
+                </a>
               </motion.div>
 
               {/* Greeting */}
-              <div className="space-y-1.5">
+              <div className="space-y-2 mt-3">
                 <motion.h1
                   className="text-4xl md:text-5xl font-bold tracking-tight"
                   style={{ color: 'var(--text-primary)' }}
@@ -205,10 +221,24 @@ export default function Page() {
                   style={{ color: 'var(--text-muted)' }}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.32, duration: 0.38 }}
+                  transition={{ delay: 0.28, duration: 0.38 }}
                 >
-                  Real Estate Lead Generation & Inside Sales VA · Cavite, PH
+                  I turn Facebook Ads into closed deals — ₱60M+ in sales to prove it.
                 </motion.p>
+                <motion.div
+                  className="flex items-center justify-center gap-2"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.38, duration: 0.35 }}
+                >
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: '#22c55e' }} />
+                    <span className="relative inline-flex rounded-full h-2 w-2" style={{ background: '#22c55e' }} />
+                  </span>
+                  <span className="text-xs font-medium" style={{ color: '#22c55e' }}>
+                    Available for hire
+                  </span>
+                </motion.div>
               </div>
 
               {/* Stats */}
@@ -255,7 +285,28 @@ export default function Page() {
                 )}
               </AnimatePresence>
 
+              {/* CTA */}
+              <motion.a
+                href="mailto:eroncca08@gmail.com?subject=Let's%20Work%20Together"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.35 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm"
+                style={{
+                  background: '#00e5ff',
+                  color: '#000',
+                  boxShadow: '0 0 24px rgba(0,229,255,0.35)',
+                }}
+              >
+                <CalendarDays size={15} strokeWidth={2.5} />
+                Book a Free Strategy Call
+              </motion.a>
+
               <ContactBar />
+
+              {/* Testimonials */}
+              <TestimonialsSection />
             </motion.div>
           ) : (
             /* Chat state */
