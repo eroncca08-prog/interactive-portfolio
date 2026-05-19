@@ -15,7 +15,8 @@ export async function POST(req: Request) {
       temperature: 0.78,
       maxTokens: 900,
       onError: ({ error }) => {
-        console.error('>>> Groq error:', error)
+        console.error('>>> Groq error:', JSON.stringify(error))
+        throw error
       },
     })
 
