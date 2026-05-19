@@ -17,12 +17,12 @@ const mono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Eron Carlo Caina — Meta Ads & Lead Generation Specialist',
+  title: 'Eron Carlo Caina — Lead Generation & Inbound Lead Manager',
   description:
-    'Results-driven Meta Ads and Lead Generation Specialist. I help businesses scale through high-converting Facebook Ad campaigns, video content, and data-driven lead funnels.',
-  keywords: ['Meta Ads', 'Facebook Ads', 'Lead Generation', 'Digital Marketing', 'Cavite Philippines'],
+    'Results-driven Lead Generation and Inbound Lead Manager. I help businesses attract, capture, and convert high-intent leads through Meta Ads, video content, and automated funnels.',
+  keywords: ['Lead Generation', 'Inbound Lead Manager', 'Meta Ads', 'Facebook Ads', 'Digital Marketing', 'Cavite Philippines'],
   openGraph: {
-    title: 'Eron Carlo Caina — Real Estate Lead Generation & Inside Sales VA',
+    title: 'Eron Carlo Caina — Lead Generation & Inbound Lead Manager',
     description: 'AI-powered portfolio. Ask me anything about my work.',
     type: 'website',
   },

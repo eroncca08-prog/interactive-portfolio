@@ -223,7 +223,7 @@ export default function Page() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.28, duration: 0.38 }}
                 >
-                  I turn Facebook Ads into closed deals — ₱60M+ in sales to prove it.
+                  Lead Generation & Inbound Lead Manager — ₱60M+ in deals closed.
                 </motion.p>
                 <motion.div
                   className="flex items-center justify-center gap-2"
