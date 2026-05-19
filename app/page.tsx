@@ -220,7 +220,7 @@ export default function Page() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.18, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  Hey, I'm Eron Carlo 👋
+                  Hey, I'm Eron 👋
                 </motion.h1>
                 <motion.p
                   className="text-base md:text-lg font-medium"
