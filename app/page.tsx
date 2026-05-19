@@ -131,29 +131,21 @@ export default function Page() {
           <AnimatePresence>
             {hasMessages && (
               <motion.button
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 10 }}
+                initial={{ opacity: 0, scale: 0.85 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.85 }}
                 transition={{ duration: 0.2 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={handleBack}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all active:scale-95"
+                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold"
                 style={{
-                  color: 'var(--text-muted)',
-                  border: '1px solid var(--border)',
-                  background: 'transparent',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#00e5ff'
-                  e.currentTarget.style.borderColor = 'rgba(0,229,255,0.4)'
-                  e.currentTarget.style.background = 'rgba(0,229,255,0.06)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = 'var(--text-muted)'
-                  e.currentTarget.style.borderColor = 'var(--border)'
-                  e.currentTarget.style.background = 'transparent'
+                  background: 'rgba(0,229,255,0.12)',
+                  border: '1px solid rgba(0,229,255,0.35)',
+                  color: '#00e5ff',
+                  backdropFilter: 'blur(8px)',
                 }}
               >
-                <ArrowLeft size={13} strokeWidth={2} />
+                <ArrowLeft size={15} strokeWidth={2.5} />
                 Home
               </motion.button>
             )}
