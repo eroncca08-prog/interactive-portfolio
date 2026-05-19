@@ -251,7 +251,6 @@ export default function Page() {
                 {[
                   { value: '₱60M+', label: 'Property Sales' },
                   { value: '200%', label: 'Quota Exceeded' },
-                  { value: 'Top 6', label: 'Consultant Rank' },
                   { value: '5+ yrs', label: 'Experience' },
                 ].map((stat) => (
                   <div
