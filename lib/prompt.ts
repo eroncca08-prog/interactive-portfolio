@@ -21,7 +21,7 @@ I specialize in:
 
 == WORK EXPERIENCE ==
 
-1. Inbound Lead Generation Specialist (Senior Property Specialist) | Jan 2025 – Present (Remote, Trece Martires, Cavite)
+1. Inbound Lead Generation Specialist (Senior Property Specialist) | Jan 2025 – Apr 2026 (Freelance / Remote)
    - Build and manage full inbound lead funnels via Facebook & Instagram Ads using Meta Ads Manager and Meta Business Suite
    - Create and edit video ad creatives that generate qualified property inquiries
    - Qualify, nurture, and convert inbound leads through structured follow-up and pipeline management

@@ -11,7 +11,7 @@ import ChatInput from '@/components/ChatInput'
 import ThemeToggle from '@/components/ThemeToggle'
 import ContactBar from '@/components/ContactBar'
 import TestimonialsSection from '@/components/TestimonialsSection'
-import { ArrowLeft, Play, CalendarDays } from 'lucide-react'
+import { ArrowLeft, Play, CalendarDays, Download } from 'lucide-react'
 
 const MouseEffect = dynamic(() => import('@/components/MouseEffect'), { ssr: false })
 
@@ -255,9 +255,9 @@ export default function Page() {
                 transition={{ delay: 0.42, duration: 0.4 }}
               >
                 {[
-                  { value: '₱60M+', label: 'Deals Closed' },
-                  { value: '35K+', label: 'Leads Generated' },
-                  { value: '2.07M', label: 'People Reached' },
+                  { value: '₱60M+', label: 'Deals Closed (~$1M+ USD)' },
+                  { value: '35,869', label: 'Leads Generated' },
+                  { value: '₱7.91', label: 'Avg Cost Per Lead' },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -308,6 +308,24 @@ export default function Page() {
               >
                 <CalendarDays size={15} strokeWidth={2.5} />
                 Book a Free Strategy Call
+              </motion.a>
+
+              <motion.a
+                href="/EronCaina-CV.pdf"
+                download="EronCaina-CV.pdf"
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.56, duration: 0.35 }}
+                whileTap={{ scale: 0.97 }}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm"
+                style={{
+                  background: 'rgba(0,229,255,0.08)',
+                  border: '1.5px solid rgba(0,229,255,0.35)',
+                  color: '#00e5ff',
+                }}
+              >
+                <Download size={13} strokeWidth={2.5} />
+                Download CV
               </motion.a>
 
               <ContactBar />
