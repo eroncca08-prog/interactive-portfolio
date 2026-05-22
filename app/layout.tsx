@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Outfit, JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const outfit = Outfit({
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="" suppressHydrationWarning>
       <body className={`${outfit.variable} ${mono.variable} font-sans antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
