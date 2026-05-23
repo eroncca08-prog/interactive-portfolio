@@ -12,10 +12,10 @@ const FUNNEL = [
 const AD_STATS = [
   { value: '35,869', label: 'Leads Generated', color: '#00e5ff', icon: '🎯', bar: 100 },
   { value: '2.07M', label: 'People Reached', color: '#00ff99', icon: '📡', bar: 70 },
-  { value: '₱7.91', label: 'Avg Cost / Lead', color: '#ffb830', icon: '💰', bar: 85 },
+  { value: '$0.14', label: 'Avg Cost / Lead (USD)', color: '#ffb830', icon: '💰', bar: 85 },
   { value: '2.96M', label: 'Total Impressions', color: '#00e5ff', icon: '👁', bar: 90 },
   { value: '240+', label: 'Campaigns Run', color: '#00ff99', icon: '🚀', bar: 75 },
-  { value: '₱283K', label: 'Ad Spend Managed', color: '#ffb830', icon: '📊', bar: 60 },
+  { value: '$5K+', label: 'Ad Spend Managed', color: '#ffb830', icon: '📊', bar: 60 },
 ]
 
 const GRID_PHOTOS = [
@@ -106,7 +106,7 @@ function MetaAdsCard() {
           <div className="space-y-1">
             <div className="flex justify-between items-center">
               <span className="text-[10px] font-semibold" style={{ color: '#00e5ff' }}>Eron's campaigns</span>
-              <span className="text-[11px] font-bold" style={{ color: '#00e5ff' }}>₱7.91</span>
+              <span className="text-[11px] font-bold" style={{ color: '#00e5ff' }}>$0.14 USD</span>
             </div>
             <div className="h-3 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
               <motion.div
@@ -121,7 +121,7 @@ function MetaAdsCard() {
           <div className="space-y-1">
             <div className="flex justify-between items-center">
               <span className="text-[10px]" style={{ color: 'rgba(255,255,255,0.4)' }}>Industry average</span>
-              <span className="text-[11px] font-bold" style={{ color: 'rgba(255,255,255,0.4)' }}>₱50–₱150</span>
+              <span className="text-[11px] font-bold" style={{ color: 'rgba(255,255,255,0.4)' }}>$1–$3 USD</span>
             </div>
             <div className="h-3 rounded-full overflow-hidden" style={{ background: 'rgba(255,255,255,0.06)' }}>
               <motion.div
@@ -135,7 +135,7 @@ function MetaAdsCard() {
           </div>
         </div>
         <p className="text-[9px] mt-2 font-semibold" style={{ color: '#00ff99' }}>
-          Up to 19× cheaper per lead than industry average
+          Up to 21× cheaper per lead than industry average
         </p>
       </div>
 
@@ -289,7 +289,7 @@ const AchievementsGallery = memo(function AchievementsGallery() {
       >
         {[
           { value: '9+', label: 'Awards Won' },
-          { value: '₱60M+', label: 'Deals Closed' },
+          { value: '$1M+', label: 'Deals Closed (USD)' },
           { value: '200%', label: 'Quota Hit' },
         ].map((s) => (
           <div
