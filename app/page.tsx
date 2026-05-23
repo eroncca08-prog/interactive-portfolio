@@ -17,9 +17,9 @@ const MouseEffect = dynamic(() => import('@/components/MouseEffect'), { ssr: fal
 
 const SUGGESTIONS = [
   { label: 'Show me your results', icon: '📈' },
-  { label: 'How do you generate leads?', icon: '🎯' },
+  { label: 'What is your CPL track record?', icon: '🎯' },
   { label: 'What services do you offer?', icon: '⚡' },
-  { label: 'How can you help my business?', icon: '🤝' },
+  { label: 'Are you available for remote work?', icon: '🌍' },
 ]
 
 const PROJECT_KEYWORDS = ['project', 'portfolio', 'work', 'campaign', 'case study', 'showcase']
@@ -229,7 +229,7 @@ export default function Page() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.28, duration: 0.38 }}
                 >
-                  I build lead systems that close deals — ₱60M+ in results, 35K+ leads generated.
+                  Meta Ads Specialist & Media Buyer — $1M+ USD in results, 35K+ leads generated.
                 </motion.p>
                 <motion.div
                   className="flex items-center justify-center gap-2"
@@ -255,9 +255,9 @@ export default function Page() {
                 transition={{ delay: 0.42, duration: 0.4 }}
               >
                 {[
-                  { value: '₱60M+', label: 'Deals Closed (~$1M+ USD)' },
-                  { value: '35,869', label: 'Leads Generated' },
-                  { value: '₱7.91', label: 'Avg Cost Per Lead' },
+                  { value: '$1M+', label: 'USD in Deals Closed' },
+                  { value: '35,800+', label: 'Leads Generated' },
+                  { value: '$0.14', label: 'Avg Cost Per Lead (USD)' },
                 ].map((stat) => (
                   <div
                     key={stat.label}

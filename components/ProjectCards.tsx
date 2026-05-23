@@ -14,11 +14,11 @@ const PROJECTS: {
   link?: { label: string; href: string }
 }[] = [
   {
-    id: 'property-ads',
-    title: 'Real Estate Inbound Lead Generation System',
-    category: 'Lead Generation · Meta Ads · Real Estate',
+    id: 'meta-ads-leads',
+    title: 'High-Volume Lead Generation via Meta Ads',
+    category: 'Meta Ads · Lead Generation · Media Buying',
     description:
-      'Built a full inbound lead funnel for a Cavite property developer — from Facebook & Instagram ad creatives to lead capture, qualification, and pipeline management. Generated a consistent flow of high-intent buyers that resulted in ₱60M+ in closed deals and a Top 1–6 consultant ranking.',
+      'Managed 200+ Meta Ads campaigns from strategy to execution — audience research, creative testing, CBO/ABO optimization, and retargeting. Generated 35,800+ leads across real estate and e-commerce verticals at an average CPL of $0.14 USD with $5,000+ USD in ad spend managed.',
     images: [
       '/screenshots/awards3.jpg',
       '/screenshots/awards4.jpg',
@@ -30,36 +30,41 @@ const PROJECTS: {
       '/screenshots/client13123.jpg',
     ],
     metrics: [
-      { icon: TrendingUp, label: '₱60M+ Deals Closed', color: '#00e5ff' },
-      { icon: Target, label: '200% Quota Exceeded', color: '#00ff99' },
-      { icon: Users, label: 'Top 1–6 Lead Performer', color: '#ffb830' },
+      { icon: TrendingUp, label: '35,800+ Leads Generated', color: '#00e5ff' },
+      { icon: Target, label: '$0.14 USD Avg CPL', color: '#00ff99' },
+      { icon: Users, label: '2M+ Total Reach', color: '#ffb830' },
     ],
     link: { label: 'Facebook Page', href: 'https://www.facebook.com/profile.php?id=61573811056989' },
   },
   {
-    id: 'bancassurance-leads',
-    title: 'Multi-Channel Inbound Lead Pipeline',
-    category: 'Lead Management · Financial Services',
+    id: 'ecommerce-ads',
+    title: 'E-commerce Ad Creative & Campaign Management',
+    category: 'E-commerce · Video Ads · Direct Response',
     description:
-      'Designed and managed a multi-channel inbound lead pipeline for BPI EPZA bancassurance products. Combined Facebook Ads, cold calling, referral networking, and branch seminars to build a steady flow of qualified prospects — consistently hitting and exceeding monthly lead targets.',
-    images: ['/screenshots/bancasurrance.jpg'],
+      'Built and managed direct-response ad campaigns for e-commerce clients — scripting video hooks, editing creatives in CapCut, writing ad copy, and running A/B split tests on audiences and formats. Full campaign management from creative production to performance reporting.',
+    images: ['/screenshots/video-ads.png'],
     metrics: [
-      { icon: TrendingUp, label: '3× Lead Volume', color: '#00e5ff' },
-      { icon: Target, label: '200% Quota Hit', color: '#00ff99' },
-      { icon: Users, label: 'Multi-Channel Pipeline', color: '#ffb830' },
+      { icon: TrendingUp, label: 'Direct-Response Creatives', color: '#00e5ff' },
+      { icon: Target, label: 'A/B Tested Audiences', color: '#00ff99' },
+      { icon: Users, label: 'Full Campaign Management', color: '#ffb830' },
     ],
   },
   {
-    id: 'video-ad-campaign',
-    title: 'Video-Driven Lead Funnel',
-    category: 'Video Ads · Inbound Lead Gen · Meta Ads',
+    id: 'property-ads',
+    title: '$1M+ USD in Closed Deals via Meta Ads',
+    category: 'Real Estate · Lead Funnel · Meta Ads',
     description:
-      'Created and managed video-first inbound lead funnels via Meta Business Suite — scripting direction, ad creative editing, audience targeting, A/B testing, and weekly pipeline reporting. Videos were engineered to generate inbound inquiries, not just views.',
-    images: ['/screenshots/video-ads.png'],
+      'Built a full inbound lead funnel for a property developer — Facebook & Instagram ad creatives, audience targeting, lead qualification, and pipeline management. Results: $1M+ USD in closed deals, Top 2 consultant ranking, 200% quota exceeded within 6 months.',
+    images: [
+      '/screenshots/awards3.jpg',
+      '/screenshots/awards4.jpg',
+      '/screenshots/awardss.jpg',
+      '/screenshots/awards2.jpg',
+    ],
     metrics: [
-      { icon: TrendingUp, label: '120% ROAS Improvement', color: '#00e5ff' },
-      { icon: Target, label: '25K+ Weekly Reach', color: '#00ff99' },
-      { icon: Users, label: 'Full Lead Pipeline Managed', color: '#ffb830' },
+      { icon: TrendingUp, label: '$1M+ USD Deals Closed', color: '#00e5ff' },
+      { icon: Target, label: '200% Quota Exceeded', color: '#00ff99' },
+      { icon: Users, label: 'Top 2 Consultant Ranking', color: '#ffb830' },
     ],
   },
 ]
