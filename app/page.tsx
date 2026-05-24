@@ -69,9 +69,21 @@ const SERVICES = [
 const CAMPAIGNS = [
   { rank: 1, name: 'Audrey – Ready For Occupancy', leads: 2702, cpl: '$0.002', width: '100%' },
   { rank: 2, name: 'Audrey – Ready for Occupancy (Near)', leads: 2384, cpl: '$0.002', width: '88%' },
-  { rank: 3, name: 'California (Property)', leads: 2153, cpl: '$0.002', width: '80%' },
-  { rank: 4, name: 'Audrey – Ready For Occupancy', leads: 2132, cpl: '$0.003', width: '79%' },
-  { rank: 5, name: 'Elia – Single Attached – Cavite', leads: 1028, cpl: '$0.017', width: '38%' },
+  { rank: 3, name: 'Audrey – Ready for Occupancy (Near)', leads: 2302, cpl: '$0.002', width: '85%' },
+  { rank: 4, name: 'California (Property)', leads: 2153, cpl: '$0.002', width: '80%' },
+  { rank: 5, name: 'Audrey – Ready For Occupancy', leads: 2132, cpl: '$0.003', width: '79%' },
+  { rank: 6, name: 'Audrey – Ready For Occupancy', leads: 2078, cpl: '$0.002', width: '77%' },
+  { rank: 7, name: 'Elia – Single Attached – Cavite', leads: 1028, cpl: '$0.017', width: '38%' },
+]
+
+const MESSAGING_CAMPAIGNS = [
+  { cpl: '$0.059', leads: 112, width: '15%' },
+  { cpl: '$0.064', leads: 478, width: '65%' },
+  { cpl: '$0.074', leads: 117, width: '16%' },
+  { cpl: '$0.078', leads: 428, width: '58%' },
+  { cpl: '$0.081', leads: 732, width: '100%' },
+  { cpl: '$0.122', leads: 757, width: '100%' },
+  { cpl: '$0.152', leads: 226, width: '31%' },
 ]
 
 const CASE_STUDIES = [
@@ -343,46 +355,19 @@ export default function Page() {
             </div>
           </FadeIn>
 
-          {/* Best Messaging CPL */}
-          <FadeIn delay={0.2} className="bg-white border border-[#e8e8e8] rounded-2xl p-5">
-            <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb] mb-3">
-              Best CPL — Messaging Campaigns
-            </p>
-            <div className="divide-y divide-[#f5f5f5]">
-              {[
-                { cpl: '$0.059', leads: 112, width: '15%' },
-                { cpl: '$0.064', leads: 478, width: '65%' },
-                { cpl: '$0.074', leads: 117, width: '16%' },
-                { cpl: '$0.078', leads: 428, width: '58%' },
-                { cpl: '$0.081', leads: 732, width: '100%' },
-              ].map(({ cpl, leads, width }) => (
-                <div key={cpl} className="flex items-center gap-2.5 py-2">
-                  <span className="text-[11px] font-bold text-[#1a7a4a] w-16 flex-shrink-0">{cpl}</span>
-                  <div className="flex-1 h-1.5 bg-[#f0f0f0] rounded-full overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-[#1a7a4a] to-[#4fc98a]"
-                      style={{ width }}
-                    />
-                  </div>
-                  <span className="text-[11px] font-semibold text-[#777] w-8 text-right flex-shrink-0">
-                    {leads}
-                  </span>
-                </div>
-              ))}
+          {/* Top Campaigns by Leads — full width */}
+          <FadeIn delay={0.2} className="bg-white border border-[#e8e8e8] rounded-2xl p-5 md:col-span-2">
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb]">
+                Top Campaigns by Leads
+              </p>
+              <span className="text-[9px] font-semibold text-[#bbb] uppercase tracking-[0.08em]">
+                Leads · CPL (USD)
+              </span>
             </div>
-            <div className="mt-2.5 bg-[#f0f7f3] border border-[#c8e6d4] rounded-lg px-3 py-2 text-[11px] font-bold text-[#1a7a4a]">
-              Messaging conversations · Ongoing
-            </div>
-          </FadeIn>
-
-          {/* Top Campaigns — span 2 */}
-          <FadeIn delay={0.25} className="bg-white border border-[#e8e8e8] rounded-2xl p-5 md:col-span-2">
-            <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb] mb-3">
-              Top Campaigns by Leads
-            </p>
             <div className="divide-y divide-[#f5f5f5]">
               {CAMPAIGNS.map(({ rank, name, leads, cpl, width }) => (
-                <div key={rank} className="flex items-center gap-3 py-2.5">
+                <div key={rank} className="flex items-center gap-3 py-2">
                   <span className="text-[11px] font-bold text-[#ccc] w-5 text-center flex-shrink-0">
                     #{rank}
                   </span>
@@ -395,14 +380,47 @@ export default function Page() {
                       />
                     </div>
                   </div>
-                  <span className="text-[13px] font-extrabold text-[#1a7a4a] w-12 text-right flex-shrink-0">
+                  <span className="text-[13px] font-extrabold text-[#1a7a4a] w-14 text-right flex-shrink-0">
                     {leads.toLocaleString()}
                   </span>
-                  <span className="text-[10px] text-[#777] w-16 text-right flex-shrink-0 font-semibold">
+                  <span className="text-[10px] text-[#777] w-14 text-right flex-shrink-0 font-semibold">
                     {cpl}
                   </span>
                 </div>
               ))}
+            </div>
+          </FadeIn>
+
+          {/* Best Messaging CPL */}
+          <FadeIn delay={0.25} className="bg-white border border-[#e8e8e8] rounded-2xl p-5">
+            <div className="flex items-center justify-between mb-3">
+              <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb]">
+                Messaging Campaigns
+              </p>
+              <span className="text-[9px] font-semibold text-[#bbb] uppercase tracking-[0.08em]">
+                Leads · CPL
+              </span>
+            </div>
+            <div className="divide-y divide-[#f5f5f5]">
+              {MESSAGING_CAMPAIGNS.map(({ cpl, leads, width }) => (
+                <div key={`${cpl}-${leads}`} className="flex items-center gap-2.5 py-2">
+                  <div className="flex-1 h-1.5 bg-[#f0f0f0] rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-[#1a7a4a] to-[#4fc98a]"
+                      style={{ width }}
+                    />
+                  </div>
+                  <span className="text-[12px] font-extrabold text-[#1a7a4a] w-10 text-right flex-shrink-0">
+                    {leads}
+                  </span>
+                  <span className="text-[10px] font-bold text-[#777] w-12 text-right flex-shrink-0">
+                    {cpl}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-2.5 bg-[#f0f7f3] border border-[#c8e6d4] rounded-lg px-3 py-2 text-[11px] font-bold text-[#1a7a4a]">
+              Best: $0.059 CPL · Ongoing
             </div>
           </FadeIn>
         </div>
