@@ -343,8 +343,40 @@ export default function Page() {
             </div>
           </FadeIn>
 
+          {/* Best Messaging CPL */}
+          <FadeIn delay={0.2} className="bg-white border border-[#e8e8e8] rounded-2xl p-5">
+            <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb] mb-3">
+              Best CPL — Messaging Campaigns
+            </p>
+            <div className="divide-y divide-[#f5f5f5]">
+              {[
+                { cpl: 'PHP 3.33', leads: 112, width: '15%' },
+                { cpl: 'PHP 3.61', leads: 478, width: '65%' },
+                { cpl: 'PHP 4.17', leads: 117, width: '16%' },
+                { cpl: 'PHP 4.37', leads: 428, width: '58%' },
+                { cpl: 'PHP 4.52', leads: 732, width: '100%' },
+              ].map(({ cpl, leads, width }) => (
+                <div key={cpl} className="flex items-center gap-2.5 py-2">
+                  <span className="text-[11px] font-bold text-[#1a7a4a] w-16 flex-shrink-0">{cpl}</span>
+                  <div className="flex-1 h-1.5 bg-[#f0f0f0] rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-[#1a7a4a] to-[#4fc98a]"
+                      style={{ width }}
+                    />
+                  </div>
+                  <span className="text-[11px] font-semibold text-[#777] w-8 text-right flex-shrink-0">
+                    {leads}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-2.5 bg-[#f0f7f3] border border-[#c8e6d4] rounded-lg px-3 py-2 text-[11px] font-bold text-[#1a7a4a]">
+              Messaging conversations · Ongoing
+            </div>
+          </FadeIn>
+
           {/* Top Campaigns — span 2 */}
-          <FadeIn delay={0.2} className="bg-white border border-[#e8e8e8] rounded-2xl p-5 md:col-span-2">
+          <FadeIn delay={0.25} className="bg-white border border-[#e8e8e8] rounded-2xl p-5 md:col-span-2">
             <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb] mb-3">
               Top Campaigns by Leads
             </p>
