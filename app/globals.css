@@ -2,30 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Theme variables ── */
-.dark {
-  --bg: #060608;
-  --bg-surface: #0e0e16;
-  --bg-card: #111120;
-  --border: rgba(255, 255, 255, 0.07);
-  --text-primary: #eeeef5;
-  --text-muted: #5c5c72;
-  --user-bubble: #131320;
-  --ai-bubble: #0b1928;
-}
-
-:root:not(.dark) {
-  --bg: #f4f4f0;
-  --bg-surface: #ffffff;
-  --bg-card: #fafaf8;
-  --border: rgba(0, 0, 0, 0.08);
-  --text-primary: #0c0c14;
-  --text-muted: #7a7a8c;
-  --user-bubble: #e8e8f0;
-  --ai-bubble: #ddf3fa;
-}
-
-/* ── Base reset ── */
 *,
 *::before,
 *::after {
@@ -39,15 +15,13 @@ html {
 }
 
 body {
-  background-color: var(--bg);
-  color: var(--text-primary);
-  font-family: var(--font-outfit), system-ui, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  overflow-x: hidden;
+  background-color: #f5f5f3;
+  color: #111;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* ── Scrollbar ── */
 ::-webkit-scrollbar {
   width: 3px;
 }
@@ -55,119 +29,6 @@ body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
+  background: #ccc;
   border-radius: 2px;
-  opacity: 0.4;
-}
-
-/* ── Mouse rainbow gradient ── */
-.mouse-gradient {
-  position: fixed;
-  width: 580px;
-  height: 580px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9997;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.8s ease;
-  will-change: left, top, opacity;
-  background: radial-gradient(
-    circle,
-    hsla(var(--hue, 180), 75%, 58%, 0.11) 0%,
-    hsla(var(--hue, 180), 70%, 55%, 0.05) 45%,
-    transparent 72%
-  );
-}
-
-/* ── Click splash rings ── */
-@keyframes splashRing {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.65;
-    border-width: 2.5px;
-  }
-  100% {
-    width: 220px;
-    height: 220px;
-    opacity: 0;
-    border-width: 1px;
-  }
-}
-
-/* ── Avatar float ── */
-@keyframes avatarFloat {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-7px); }
-}
-@keyframes avatarFloatSlow {
-  0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-4px); }
-}
-@keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 30px 4px rgba(0,229,255,0.35), 0 0 70px rgba(0,229,255,0.12); }
-  50%       { box-shadow: 0 0 50px 10px rgba(0,229,255,0.55), 0 0 100px rgba(0,229,255,0.2); }
-}
-
-/* ── Typing dots ── */
-@keyframes dotBounce {
-  0%,
-  80%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.35;
-  }
-  40% {
-    transform: translateY(-5px);
-    opacity: 1;
-  }
-}
-
-/* ── Prose styles for markdown in chat ── */
-.prose-chat {
-  line-height: 1.65;
-}
-
-.prose-chat p + p {
-  margin-top: 0.5rem;
-}
-
-.prose-chat ul {
-  padding-left: 1.1rem;
-  margin: 0.4rem 0;
-  list-style: disc;
-}
-
-.prose-chat ol {
-  padding-left: 1.2rem;
-  margin: 0.4rem 0;
-  list-style: decimal;
-}
-
-.prose-chat li {
-  margin: 0.2rem 0;
-}
-
-.prose-chat pre {
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  overflow-x: auto;
-  margin: 0.6rem 0;
-  font-family: var(--font-mono), monospace;
-  font-size: 0.8rem;
-}
-
-/* ── Noise texture overlay (performance-safe) ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 128px 128px;
 }

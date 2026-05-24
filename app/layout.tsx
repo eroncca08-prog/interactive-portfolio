@@ -1,38 +1,40 @@
 import type { Metadata } from 'next'
-import { Outfit, JetBrains_Mono } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const outfit = Outfit({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-outfit',
+  variable: '--font-jakarta',
   display: 'swap',
-  weight: ['300', '400', '500', '600', '700'],
-})
-
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  display: 'swap',
-  weight: ['400', '500'],
+  weight: ['400', '500', '600', '700', '800'],
 })
 
 export const metadata: Metadata = {
-  title: 'Eron Carlo Caina — Lead Generation & Inbound Lead Manager',
+  title: 'Eron Carlo Caina — Meta Ads Specialist & Media Buyer',
   description:
-    'Results-driven Lead Generation and Inbound Lead Manager. I help businesses attract, capture, and convert high-intent leads through Meta Ads, video content, and automated funnels.',
-  keywords: ['Lead Generation', 'Inbound Lead Manager', 'Meta Ads', 'Facebook Ads', 'Digital Marketing', 'Cavite Philippines'],
+    'Meta Ads Specialist with 35,869 leads generated at $0.14 avg CPL. 200+ campaigns across real estate and e-commerce. Available for remote work worldwide.',
+  keywords: [
+    'Meta Ads Specialist',
+    'Facebook Ads Manager',
+    'Media Buyer',
+    'Lead Generation',
+    'CBO',
+    'ABO',
+    'Digital Marketing Philippines',
+    'Remote Meta Ads',
+  ],
   openGraph: {
-    title: 'Eron Carlo Caina — Lead Generation & Inbound Lead Manager',
-    description: 'AI-powered portfolio. Ask me anything about my work.',
+    title: 'Eron Carlo Caina — Meta Ads Specialist',
+    description: '35,869 leads · $0.14 avg CPL · $1M+ in closed deals. Available for remote work worldwide.',
     type: 'website',
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="" suppressHydrationWarning>
-      <body className={`${outfit.variable} ${mono.variable} font-sans antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${jakarta.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
