@@ -67,11 +67,11 @@ const SERVICES = [
 ]
 
 const CAMPAIGNS = [
-  { rank: 1, name: 'Audrey – Ready For Occupancy', leads: 2702, cpl: 'PHP 0.11', width: '100%' },
-  { rank: 2, name: 'Audrey – Ready for Occupancy (Near)', leads: 2384, cpl: 'PHP 0.13', width: '88%' },
-  { rank: 3, name: 'California (Property)', leads: 2153, cpl: 'PHP 0.12', width: '80%' },
-  { rank: 4, name: 'Audrey – Ready For Occupancy', leads: 2132, cpl: 'PHP 0.14', width: '79%' },
-  { rank: 5, name: 'Elia – Single Attached – Cavite', leads: 1028, cpl: 'PHP 0.97', width: '38%' },
+  { rank: 1, name: 'Audrey – Ready For Occupancy', leads: 2702, cpl: '$0.002', width: '100%' },
+  { rank: 2, name: 'Audrey – Ready for Occupancy (Near)', leads: 2384, cpl: '$0.002', width: '88%' },
+  { rank: 3, name: 'California (Property)', leads: 2153, cpl: '$0.002', width: '80%' },
+  { rank: 4, name: 'Audrey – Ready For Occupancy', leads: 2132, cpl: '$0.003', width: '79%' },
+  { rank: 5, name: 'Elia – Single Attached – Cavite', leads: 1028, cpl: '$0.017', width: '38%' },
 ]
 
 const CASE_STUDIES = [
@@ -350,11 +350,11 @@ export default function Page() {
             </p>
             <div className="divide-y divide-[#f5f5f5]">
               {[
-                { cpl: 'PHP 3.33', leads: 112, width: '15%' },
-                { cpl: 'PHP 3.61', leads: 478, width: '65%' },
-                { cpl: 'PHP 4.17', leads: 117, width: '16%' },
-                { cpl: 'PHP 4.37', leads: 428, width: '58%' },
-                { cpl: 'PHP 4.52', leads: 732, width: '100%' },
+                { cpl: '$0.059', leads: 112, width: '15%' },
+                { cpl: '$0.064', leads: 478, width: '65%' },
+                { cpl: '$0.074', leads: 117, width: '16%' },
+                { cpl: '$0.078', leads: 428, width: '58%' },
+                { cpl: '$0.081', leads: 732, width: '100%' },
               ].map(({ cpl, leads, width }) => (
                 <div key={cpl} className="flex items-center gap-2.5 py-2">
                   <span className="text-[11px] font-bold text-[#1a7a4a] w-16 flex-shrink-0">{cpl}</span>
