@@ -144,6 +144,11 @@ const SKILLS = [
   'Lead Gen',
   'Ad Copywriting',
   'Retargeting',
+  'CTR Optimization',
+  'Hook Rate',
+  'Hold Rate',
+  'CPA',
+  'ROAS',
 ]
 
 export default function Page() {
@@ -332,8 +337,31 @@ export default function Page() {
             </div>
           </FadeIn>
 
-          {/* At a Glance */}
+          {/* Metrics Tracked */}
           <FadeIn delay={0.15} className="bg-white border border-[#e8e8e8] rounded-2xl p-5">
+            <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb] mb-3">
+              Metrics I Optimize For
+            </p>
+            <div className="flex flex-col gap-2.5">
+              {[
+                { metric: 'CPA', desc: 'Cost Per Acquisition — primary optimization target' },
+                { metric: 'CTR', desc: 'Click-through rate — measures ad relevance' },
+                { metric: 'Hook Rate', desc: '3-sec video views — creative strength signal' },
+                { metric: 'Hold Rate', desc: 'Video completion — audience-message fit' },
+                { metric: 'ROAS', desc: 'Return on ad spend — campaign profitability' },
+              ].map(({ metric, desc }) => (
+                <div key={metric} className="flex items-start gap-2.5">
+                  <span className="text-[11px] font-extrabold text-[#1a7a4a] w-20 flex-shrink-0 mt-[1px]">
+                    {metric}
+                  </span>
+                  <span className="text-[10px] text-[#aaa] leading-relaxed">{desc}</span>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
+          {/* At a Glance */}
+          <FadeIn delay={0.2} className="bg-white border border-[#e8e8e8] rounded-2xl p-5">
             <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb] mb-3">
               At a Glance
             </p>
@@ -392,7 +420,7 @@ export default function Page() {
           </FadeIn>
 
           {/* Best Messaging CPL */}
-          <FadeIn delay={0.25} className="bg-white border border-[#e8e8e8] rounded-2xl p-5">
+          <FadeIn delay={0.3} className="bg-white border border-[#e8e8e8] rounded-2xl p-5 md:col-span-3">
             <div className="flex items-center justify-between mb-3">
               <p className="text-[9px] font-bold tracking-[0.1em] uppercase text-[#bbb]">
                 Messaging Campaigns
@@ -401,26 +429,22 @@ export default function Page() {
                 Leads · CPL
               </span>
             </div>
-            <div className="divide-y divide-[#f5f5f5]">
+            <div className="grid grid-cols-2 md:grid-cols-7 gap-2 mt-1">
               {MESSAGING_CAMPAIGNS.map(({ cpl, leads, width }) => (
-                <div key={`${cpl}-${leads}`} className="flex items-center gap-2.5 py-2">
-                  <div className="flex-1 h-1.5 bg-[#f0f0f0] rounded-full overflow-hidden">
+                <div key={`${cpl}-${leads}`} className="bg-[#f9f9f7] border border-[#e8e8e8] rounded-xl p-3">
+                  <div className="text-[18px] font-black text-[#1a7a4a] tracking-[-0.02em] leading-none mb-0.5">
+                    {leads}
+                  </div>
+                  <div className="text-[9px] text-[#aaa] font-medium mb-2">leads</div>
+                  <div className="h-1 bg-[#f0f0f0] rounded-full overflow-hidden mb-1.5">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-[#1a7a4a] to-[#4fc98a]"
                       style={{ width }}
                     />
                   </div>
-                  <span className="text-[12px] font-extrabold text-[#1a7a4a] w-10 text-right flex-shrink-0">
-                    {leads}
-                  </span>
-                  <span className="text-[10px] font-bold text-[#777] w-12 text-right flex-shrink-0">
-                    {cpl}
-                  </span>
+                  <div className="text-[11px] font-bold text-[#555]">{cpl} CPA</div>
                 </div>
               ))}
-            </div>
-            <div className="mt-2.5 bg-[#f0f7f3] border border-[#c8e6d4] rounded-lg px-3 py-2 text-[11px] font-bold text-[#1a7a4a]">
-              Best: $0.059 CPL · Ongoing
             </div>
           </FadeIn>
         </div>
