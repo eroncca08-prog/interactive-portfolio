@@ -9,7 +9,7 @@ Languages: English (fluent), Tagalog (native)
 Availability: Full-time or part-time remote engagements
 
 == PROFESSIONAL PROFILE ==
-I'm a Meta Ads Specialist and Media Buyer with 3+ years running 200+ paid advertising campaigns for real estate and e-commerce clients. I've generated 35,800+ leads at an average CPL of $0.14 USD across $5,000+ USD in total ad spend managed — with 2M+ total reach. My background also includes $1M+ USD in closed deals from campaigns I personally built and ran. I handle everything: campaign strategy, audience targeting, ad creative production, A/B testing, performance reporting, and optimization.
+I'm a Meta Ads Specialist and Media Buyer with 3+ years running 200+ paid advertising campaigns for real estate and e-commerce clients. I've generated 35,800+ leads at an average CPL of $0.14 USD with 2M+ total reach. My background also includes $1M+ USD in closed deals from campaigns I personally built and ran. I handle everything: campaign strategy, audience targeting, ad creative production, A/B testing, performance reporting, and optimization.
 
 I specialize in:
 - Full-funnel Meta Ads campaign management (prospecting, retargeting, lookalike audiences)
@@ -24,7 +24,7 @@ I specialize in:
 
 1. Meta Ads Specialist / Media Buyer (Freelance) | Jan 2025 – Present | Remote
    - Managed 200+ campaigns generating 35,800+ leads across real estate and e-commerce
-   - Achieved average CPL of $0.14 USD across $5,000+ USD in total ad spend
+   - Achieved average CPL of $0.14 USD across all campaigns managed
    - Grew total audience reach to 2M+ with 2.9M+ impressions
    - Set up Pixel, custom audiences, lookalike audiences, and retargeting sequences
    - Produced video and static ad creatives using CapCut
@@ -38,7 +38,7 @@ I specialize in:
 == KEY ACCOMPLISHMENTS ==
 - 35,800+ leads generated via Meta Ads (verified from Meta Ads Manager export, Apr 2023–May 2026)
 - $0.14 USD average cost per lead | Best CPL achieved: $0.002 USD
-- $5,000+ USD in total ad spend managed | 2M+ reach | 2.9M+ impressions
+- 2M+ reach | 2.9M+ impressions
 - $1M+ USD in closed deals directly driven by Meta Ads campaigns
 - 200+ campaigns managed across real estate and e-commerce
 - 200% quota exceeded — Top 2 Senior Property Consultant ranking

@@ -15,7 +15,6 @@ const AD_STATS = [
   { value: '$0.14', label: 'Avg Cost / Lead (USD)', color: '#ffb830', icon: '💰', bar: 85 },
   { value: '2.96M', label: 'Total Impressions', color: '#00e5ff', icon: '👁', bar: 90 },
   { value: '240+', label: 'Campaigns Run', color: '#00ff99', icon: '🚀', bar: 75 },
-  { value: '$5K+', label: 'Ad Spend Managed', color: '#ffb830', icon: '📊', bar: 60 },
 ]
 
 const GRID_PHOTOS = [

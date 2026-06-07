@@ -18,7 +18,7 @@ const PROJECTS: {
     title: 'High-Volume Lead Generation via Meta Ads',
     category: 'Meta Ads · Lead Generation · Media Buying',
     description:
-      'Managed 200+ Meta Ads campaigns from strategy to execution — audience research, creative testing, CBO/ABO optimization, and retargeting. Generated 35,800+ leads across real estate and e-commerce verticals at an average CPL of $0.14 USD with $5,000+ USD in ad spend managed.',
+      'Managed 200+ Meta Ads campaigns from strategy to execution — audience research, creative testing, CBO/ABO optimization, and retargeting. Generated 35,800+ leads across real estate and e-commerce verticals at an average CPL of $0.14 USD.',
     images: [
       '/screenshots/awards3.jpg',
       '/screenshots/awards4.jpg',
