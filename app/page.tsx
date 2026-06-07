@@ -48,9 +48,9 @@ const SERVICES = [
   },
   {
     icon: Target,
-    title: 'Media Buying',
-    desc: 'Budget management, audience targeting, bid strategy, and scaling profitable campaigns.',
-    tags: ['Lookalike Audiences', 'Custom Audiences', 'Pixel Setup'],
+    title: 'Google Ads Management',
+    desc: 'Search, display, and performance campaigns on Google Ads optimized for leads and conversions.',
+    tags: ['Search Campaigns', 'Google Analytics', 'Conversion Tracking'],
   },
   {
     icon: Video,
@@ -77,13 +77,13 @@ const CAMPAIGNS = [
 ]
 
 const MESSAGING_CAMPAIGNS = [
-  { cpl: '$0.059', leads: 112, width: '15%' },
-  { cpl: '$0.064', leads: 478, width: '65%' },
-  { cpl: '$0.074', leads: 117, width: '16%' },
-  { cpl: '$0.078', leads: 428, width: '58%' },
-  { cpl: '$0.081', leads: 732, width: '100%' },
-  { cpl: '$0.122', leads: 757, width: '100%' },
-  { cpl: '$0.152', leads: 226, width: '31%' },
+  { name: 'PH1', cpl: 'PHP 19.48', leads: 774, width: '100%', highlight: true },
+  { name: 'Real Estate', cpl: 'PHP 26.71', leads: 770, width: '99%', highlight: true },
+  { name: 'Southscapes', cpl: 'PHP 23.88', leads: 628, width: '81%', highlight: true },
+  { name: 'Campaign', cpl: 'PHP 3.61', leads: 478, width: '62%', highlight: false },
+  { name: 'Campaign', cpl: 'PHP 4.52', leads: 732, width: '94%', highlight: false },
+  { name: 'Campaign', cpl: 'PHP 6.85', leads: 757, width: '97%', highlight: false },
+  { name: 'Campaign', cpl: 'PHP 10.76', leads: 226, width: '29%', highlight: false },
 ]
 
 const CASE_STUDIES = [
@@ -92,7 +92,7 @@ const CASE_STUDIES = [
     category: 'Lead Generation',
     num: '35,869',
     title: 'High-Volume Real Estate Lead Gen',
-    desc: '200+ campaigns, $0.14 USD avg CPL across 3 years. Top campaign: 2,702 leads at PHP 0.11 CPL on a PHP 300 lifetime budget.',
+    desc: '350+ campaigns, $0.14 USD avg CPL across 3 years. Top campaign: 2,702 leads at PHP 0.11 CPL on a PHP 300 lifetime budget.',
     tags: ['Meta Ads', 'CBO/ABO', 'Retargeting'],
   },
   {
@@ -132,11 +132,12 @@ const ABOUT_QUICK = [
   { Icon: MapPin, label: 'Location', value: 'Naic, Cavite, Philippines' },
   { Icon: Globe, label: 'Availability', value: 'Remote Worldwide · Full-time or Part-time' },
   { Icon: MessageSquare, label: 'Languages', value: 'English (Fluent) · Filipino (Native)' },
-  { Icon: Calendar, label: 'Experience', value: '3+ Years · 200+ Campaigns' },
+  { Icon: Calendar, label: 'Experience', value: '3+ Years · 350 Campaigns' },
 ]
 
 const SKILLS = [
   'Meta Ads Manager',
+  'Google Ads',
   'Facebook Pixel',
   'CBO / ABO',
   'CapCut',
@@ -228,8 +229,8 @@ export default function Page() {
           transition={{ duration: 0.4, delay: 0.22 }}
           className="text-[15px] text-[#777] font-medium mb-7 leading-relaxed max-w-2xl"
         >
-          <strong className="text-[#111] font-bold">Eron Carlo Caina</strong> — Meta Ads Specialist
-          and Media Buyer. 200+ campaigns across real estate and e-commerce. Philippines, remote
+          <strong className="text-[#111] font-bold">Eron Carlo Caina</strong> — Meta Ads & Google Ads Specialist
+          and Media Buyer. 350+ campaigns across real estate and e-commerce. Philippines, remote
           worldwide.
         </motion.p>
 
@@ -249,7 +250,7 @@ export default function Page() {
             <ArrowRight size={14} strokeWidth={2.5} />
           </a>
           <a
-            href="/EronCaina-CV.pdf"
+            href="/Eron-Caina-CV.pdf"
             download
             className="inline-flex items-center gap-2 bg-white text-[#111] text-[13px] font-semibold px-[22px] py-3 rounded-lg border border-[#e8e8e8] active:scale-[0.98] transition-transform"
           >
@@ -269,7 +270,7 @@ export default function Page() {
             Verified Ad Performance
           </h2>
           <p className="text-sm text-[#777] font-medium mb-7">
-            Data from Meta Ads Manager · Apr 2023 – May 2026 · 189 campaigns
+            Data from Meta Ads Manager · Apr 2023 – Jun 2026 · 350 campaigns
           </p>
         </FadeIn>
 
@@ -368,8 +369,8 @@ export default function Page() {
             <div className="flex flex-col gap-4">
               {[
                 { value: '$0.002', label: 'Best CPL Achieved (USD)' },
-                { value: '189', label: 'Campaigns Run' },
-                { value: '$5K+', label: 'Total Ad Spend (USD)' },
+                { value: '350+', label: 'Campaigns Run' },
+                { value: '35,869', label: 'Total Leads Generated' },
               ].map(({ value, label }) => (
                 <div key={label}>
                   <div className="text-[22px] font-black text-[#111] tracking-[-0.03em] leading-none">
@@ -419,6 +420,51 @@ export default function Page() {
             </div>
           </FadeIn>
 
+          {/* Meta Ads Manager Screenshot Proof */}
+          <FadeIn delay={0.25} className="bg-white border border-[#e8e8e8] rounded-2xl overflow-hidden md:col-span-3">
+            <div className="px-5 pt-5 pb-3 flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#1a7a4a] animate-pulse flex-shrink-0" />
+                <p className="text-[11px] font-bold tracking-[0.05em] uppercase text-[#555]">
+                  Verified from Meta Ads Manager
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { label: '350 Campaigns' },
+                  { label: 'May 2023 – Jun 2026' },
+                  { label: 'Real Account Data' },
+                ].map(({ label }) => (
+                  <span key={label} className="inline-flex items-center bg-[#1a7a4a] text-white text-[10px] font-extrabold px-3 py-1.5 rounded-full uppercase tracking-[0.06em]">
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="relative mx-5 mb-5 rounded-xl overflow-hidden border border-[#e8e8e8]">
+              <img
+                src="/screenshots/meta-ads-proof.png"
+                alt="Meta Ads Manager campaign results"
+                className="w-full object-cover"
+              />
+              {/* Highlight overlays */}
+              <div className="absolute inset-0 pointer-events-none">
+                {/* Real Estate row highlight */}
+                <div className="absolute left-0 right-0 border-l-2 border-[#1a7a4a]" style={{ top: '34%', height: '11%', background: 'rgba(26,122,74,0.06)' }}>
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1a7a4a] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">770 msgs · PHP 26.71</span>
+                </div>
+                {/* PH1 row highlight */}
+                <div className="absolute left-0 right-0 border-l-2 border-[#1a7a4a]" style={{ top: '47%', height: '11%', background: 'rgba(26,122,74,0.06)' }}>
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1a7a4a] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">774 msgs · PHP 19.48</span>
+                </div>
+                {/* Southscapes row highlight */}
+                <div className="absolute left-0 right-0 border-l-2 border-[#1a7a4a]" style={{ top: '60%', height: '11%', background: 'rgba(26,122,74,0.06)' }}>
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1a7a4a] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">628 msgs · PHP 23.88</span>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
           {/* Best Messaging CPL */}
           <FadeIn delay={0.3} className="bg-white border border-[#e8e8e8] rounded-2xl p-5 md:col-span-3">
             <div className="flex items-center justify-between mb-3">
@@ -430,19 +476,22 @@ export default function Page() {
               </span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-7 gap-2 mt-1">
-              {MESSAGING_CAMPAIGNS.map(({ cpl, leads, width }) => (
-                <div key={`${cpl}-${leads}`} className="bg-[#f9f9f7] border border-[#e8e8e8] rounded-xl p-3">
+              {MESSAGING_CAMPAIGNS.map(({ name, cpl, leads, width, highlight }) => (
+                <div key={`${cpl}-${leads}`} className={`rounded-xl p-3 border ${highlight ? 'bg-[#f0f7f3] border-[#c8e6d4]' : 'bg-[#f9f9f7] border-[#e8e8e8]'}`}>
+                  {highlight && (
+                    <div className="text-[8px] font-bold text-[#1a7a4a] uppercase tracking-[0.08em] mb-1">{name}</div>
+                  )}
                   <div className="text-[18px] font-black text-[#1a7a4a] tracking-[-0.02em] leading-none mb-0.5">
                     {leads}
                   </div>
-                  <div className="text-[9px] text-[#aaa] font-medium mb-2">leads</div>
-                  <div className="h-1 bg-[#f0f0f0] rounded-full overflow-hidden mb-1.5">
+                  <div className="text-[9px] text-[#aaa] font-medium mb-2">msgs</div>
+                  <div className="h-1 bg-[#e0e0e0] rounded-full overflow-hidden mb-1.5">
                     <div
                       className="h-full rounded-full bg-gradient-to-r from-[#1a7a4a] to-[#4fc98a]"
                       style={{ width }}
                     />
                   </div>
-                  <div className="text-[11px] font-bold text-[#555]">{cpl} CPA</div>
+                  <div className="text-[11px] font-bold text-[#555]">{cpl}</div>
                 </div>
               ))}
             </div>
@@ -458,7 +507,7 @@ export default function Page() {
           </p>
           <h2 className="text-2xl font-extrabold text-[#111] tracking-tight mb-1.5">Services</h2>
           <p className="text-sm text-[#777] font-medium mb-7">
-            Full-cycle Meta Ads management, from strategy to results
+            Full-cycle Meta Ads and Google Ads management, from strategy to results
           </p>
         </FadeIn>
 
@@ -584,7 +633,7 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
           <FadeIn delay={0.05} className="bg-white border border-[#e8e8e8] rounded-2xl p-6">
             <p className="text-[13px] text-[#777] leading-[1.7] mb-4">
-              Meta Ads Specialist with <strong className="text-[#111]">3+ years</strong> managing
+              Meta Ads & Google Ads Specialist with <strong className="text-[#111]">3+ years</strong> managing
               paid advertising campaigns across real estate and e-commerce. I handle everything from
               campaign strategy and audience targeting to ad creative production and performance
               reporting.
@@ -648,7 +697,7 @@ export default function Page() {
               <ArrowRight size={14} strokeWidth={2.5} />
             </a>
             <a
-              href="/EronCaina-CV.pdf"
+              href="/Eron-Caina-CV.pdf"
               download
               className="inline-flex items-center gap-2 bg-white/[0.08] text-white text-[13px] font-semibold px-6 py-3 rounded-lg border border-white/[0.12] active:scale-[0.98] transition-transform"
             >
@@ -672,7 +721,7 @@ export default function Page() {
       <footer className="bg-[#0a0a0a] px-6 md:px-10 py-5 flex flex-wrap justify-between items-center gap-2">
         <span className="text-[12px] font-bold text-white/40">Eron Carlo Caina</span>
         <span className="text-[11px] text-white/25">
-          Meta Ads Specialist · eroncaina-portfolio.vercel.app
+          Meta Ads & Google Ads Specialist · eroncaina-portfolio.vercel.app
         </span>
       </footer>
     </div>
