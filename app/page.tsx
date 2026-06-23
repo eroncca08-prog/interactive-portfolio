@@ -250,7 +250,7 @@ export default function Page() {
             <ArrowRight size={14} strokeWidth={2.5} />
           </a>
           <a
-            href="/Eron-Caina-CV.pdf"
+            href="/Eron-Caina-Meta-Google-Ads-Specialist-CV.pdf"
             download
             className="inline-flex items-center gap-2 bg-white text-[#111] text-[13px] font-semibold px-[22px] py-3 rounded-lg border border-[#e8e8e8] active:scale-[0.98] transition-transform"
           >
@@ -697,7 +697,7 @@ export default function Page() {
               <ArrowRight size={14} strokeWidth={2.5} />
             </a>
             <a
-              href="/Eron-Caina-CV.pdf"
+              href="/Eron-Caina-Meta-Google-Ads-Specialist-CV.pdf"
               download
               className="inline-flex items-center gap-2 bg-white/[0.08] text-white text-[13px] font-semibold px-6 py-3 rounded-lg border border-white/[0.12] active:scale-[0.98] transition-transform"
             >
