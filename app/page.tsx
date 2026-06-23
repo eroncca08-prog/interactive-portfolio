@@ -159,7 +159,7 @@ export default function Page() {
       {/* NAV */}
       <nav className="bg-white border-b border-[#e8e8e8] px-6 md:px-10 h-14 flex items-center justify-between sticky top-0 z-50">
         <span className="text-[15px] font-extrabold tracking-[-0.02em]">
-          Eron<span className="text-[#1a7a4a]">.</span>
+          Eron<span className="text-[#1d4ed8]">.</span>
         </span>
         <div className="hidden md:flex items-center gap-7">
           {['Results', 'Services', 'Work', 'About'].map((link) => (
@@ -176,7 +176,7 @@ export default function Page() {
           href="https://wa.me/639559413969?text=Hi%20Eron!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20working%20with%20you."
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#1a7a4a] text-white text-xs font-bold px-[18px] py-2 rounded-lg"
+          className="bg-[#1d4ed8] text-white text-xs font-bold px-[18px] py-2 rounded-lg"
         >
           Book a Call
         </a>
@@ -188,9 +188,9 @@ export default function Page() {
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-1.5 bg-[#f0f7f3] border border-[#c8e6d4] text-[#1a7a4a] text-[11px] font-semibold px-3 py-1.5 rounded-full mb-6"
+          className="inline-flex items-center gap-1.5 bg-[#eff6ff] border border-[#bfdbfe] text-[#1d4ed8] text-[11px] font-semibold px-3 py-1.5 rounded-full mb-6"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#1a7a4a] animate-pulse" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#1d4ed8] animate-pulse" />
           Available for Remote Work Worldwide
         </motion.div>
 
@@ -211,7 +211,7 @@ export default function Page() {
             >
               <div
                 className={`text-[48px] md:text-[56px] font-black tracking-[-0.04em] leading-none mb-1 ${
-                  accent ? 'text-[#1a7a4a]' : 'text-[#111]'
+                  accent ? 'text-[#1d4ed8]' : 'text-[#111]'
                 }`}
               >
                 {num}
@@ -244,7 +244,7 @@ export default function Page() {
             href="https://wa.me/639559413969?text=Hi%20Eron!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20working%20with%20you."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#1a7a4a] text-white text-[13px] font-bold px-[22px] py-3 rounded-lg active:scale-[0.98] transition-transform"
+            className="inline-flex items-center gap-2 bg-[#1d4ed8] text-white text-[13px] font-bold px-[22px] py-3 rounded-lg active:scale-[0.98] transition-transform"
           >
             Book a Free Strategy Call
             <ArrowRight size={14} strokeWidth={2.5} />
@@ -263,7 +263,7 @@ export default function Page() {
       {/* RESULTS */}
       <section id="results" className="px-6 md:px-10 py-10">
         <FadeIn>
-          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1a7a4a] mb-4">
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1d4ed8] mb-4">
             Campaign Results
           </p>
           <h2 className="text-2xl font-extrabold text-[#111] tracking-tight mb-1.5">
@@ -282,7 +282,7 @@ export default function Page() {
             </p>
             <div className="space-y-3">
               {[
-                { name: "Eron's campaigns", val: '$0.14 USD', color: 'text-[#1a7a4a]', fill: '#1a7a4a', width: '6%' },
+                { name: "Eron's campaigns", val: '$0.14 USD', color: 'text-[#1d4ed8]', fill: '#1d4ed8', width: '6%' },
                 { name: 'Industry average', val: '$1–$3 USD', color: 'text-[#bbb]', fill: '#ddd', width: '55%' },
                 { name: 'Real estate avg', val: '$5–$15 USD', color: 'text-[#bbb]', fill: '#eee', width: '100%' },
               ].map(({ name, val, color, fill, width }) => (
@@ -297,7 +297,7 @@ export default function Page() {
                 </div>
               ))}
             </div>
-            <div className="mt-3 bg-[#f0f7f3] border border-[#c8e6d4] rounded-lg px-3.5 py-2.5 text-[12px] font-bold text-[#1a7a4a]">
+            <div className="mt-3 bg-[#eff6ff] border border-[#bfdbfe] rounded-lg px-3.5 py-2.5 text-[12px] font-bold text-[#1d4ed8]">
               Up to 21x cheaper per lead than industry average
             </div>
           </FadeIn>
@@ -311,20 +311,20 @@ export default function Page() {
               {[
                 { label: 'Impressions', val: '2.96M', pct: '100%', bg: '#e0e0e0', accent: false },
                 { label: 'People Reached', val: '2.07M', pct: '70%', bg: '#a8d5be', accent: false },
-                { label: 'Leads Generated', val: '35,869', pct: '17%', bg: '#1a7a4a', accent: true },
+                { label: 'Leads Generated', val: '35,869', pct: '17%', bg: '#1d4ed8', accent: true },
               ].map(({ label, val, pct, bg, accent }) => (
                 <div key={label}>
                   <div className="flex justify-between mb-1">
                     <span
                       className={`text-[11px] font-medium ${
-                        accent ? 'font-semibold text-[#1a7a4a]' : 'text-[#777]'
+                        accent ? 'font-semibold text-[#1d4ed8]' : 'text-[#777]'
                       }`}
                     >
                       {label}
                     </span>
                     <span
                       className={`text-[12px] font-bold ${
-                        accent ? 'text-[#1a7a4a]' : 'text-[#777]'
+                        accent ? 'text-[#1d4ed8]' : 'text-[#777]'
                       }`}
                     >
                       {val}
@@ -352,7 +352,7 @@ export default function Page() {
                 { metric: 'ROAS', desc: 'Return on ad spend — campaign profitability' },
               ].map(({ metric, desc }) => (
                 <div key={metric} className="flex items-start gap-2.5">
-                  <span className="text-[11px] font-extrabold text-[#1a7a4a] w-20 flex-shrink-0 mt-[1px]">
+                  <span className="text-[11px] font-extrabold text-[#1d4ed8] w-20 flex-shrink-0 mt-[1px]">
                     {metric}
                   </span>
                   <span className="text-[10px] text-[#aaa] leading-relaxed">{desc}</span>
@@ -404,12 +404,12 @@ export default function Page() {
                     <p className="text-[11px] text-[#777] mb-1 truncate">{name}</p>
                     <div className="h-1.5 bg-[#f0f0f0] rounded-full overflow-hidden">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-[#1a7a4a] to-[#4fc98a]"
+                        className="h-full rounded-full bg-gradient-to-r from-[#1d4ed8] to-[#60a5fa]"
                         style={{ width }}
                       />
                     </div>
                   </div>
-                  <span className="text-[13px] font-extrabold text-[#1a7a4a] w-14 text-right flex-shrink-0">
+                  <span className="text-[13px] font-extrabold text-[#1d4ed8] w-14 text-right flex-shrink-0">
                     {leads.toLocaleString()}
                   </span>
                   <span className="text-[10px] text-[#777] w-14 text-right flex-shrink-0 font-semibold">
@@ -424,7 +424,7 @@ export default function Page() {
           <FadeIn delay={0.25} className="bg-white border border-[#e8e8e8] rounded-2xl overflow-hidden md:col-span-3">
             <div className="px-5 pt-5 pb-3 flex flex-wrap items-center gap-3">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#1a7a4a] animate-pulse flex-shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[#1d4ed8] animate-pulse flex-shrink-0" />
                 <p className="text-[11px] font-bold tracking-[0.05em] uppercase text-[#555]">
                   Verified from Meta Ads Manager
                 </p>
@@ -435,7 +435,7 @@ export default function Page() {
                   { label: 'May 2023 – Jun 2026' },
                   { label: 'Real Account Data' },
                 ].map(({ label }) => (
-                  <span key={label} className="inline-flex items-center bg-[#1a7a4a] text-white text-[10px] font-extrabold px-3 py-1.5 rounded-full uppercase tracking-[0.06em]">
+                  <span key={label} className="inline-flex items-center bg-[#1d4ed8] text-white text-[10px] font-extrabold px-3 py-1.5 rounded-full uppercase tracking-[0.06em]">
                     {label}
                   </span>
                 ))}
@@ -450,16 +450,16 @@ export default function Page() {
               {/* Highlight overlays */}
               <div className="absolute inset-0 pointer-events-none">
                 {/* Real Estate row highlight */}
-                <div className="absolute left-0 right-0 border-l-2 border-[#1a7a4a]" style={{ top: '34%', height: '11%', background: 'rgba(26,122,74,0.06)' }}>
-                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1a7a4a] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">770 msgs · PHP 26.71</span>
+                <div className="absolute left-0 right-0 border-l-2 border-[#1d4ed8]" style={{ top: '34%', height: '11%', background: 'rgba(29,78,216,0.06)' }}>
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1d4ed8] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">770 msgs · PHP 26.71</span>
                 </div>
                 {/* PH1 row highlight */}
-                <div className="absolute left-0 right-0 border-l-2 border-[#1a7a4a]" style={{ top: '47%', height: '11%', background: 'rgba(26,122,74,0.06)' }}>
-                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1a7a4a] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">774 msgs · PHP 19.48</span>
+                <div className="absolute left-0 right-0 border-l-2 border-[#1d4ed8]" style={{ top: '47%', height: '11%', background: 'rgba(29,78,216,0.06)' }}>
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1d4ed8] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">774 msgs · PHP 19.48</span>
                 </div>
                 {/* Southscapes row highlight */}
-                <div className="absolute left-0 right-0 border-l-2 border-[#1a7a4a]" style={{ top: '60%', height: '11%', background: 'rgba(26,122,74,0.06)' }}>
-                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1a7a4a] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">628 msgs · PHP 23.88</span>
+                <div className="absolute left-0 right-0 border-l-2 border-[#1d4ed8]" style={{ top: '60%', height: '11%', background: 'rgba(29,78,216,0.06)' }}>
+                  <span className="absolute right-2 top-1/2 -translate-y-1/2 bg-[#1d4ed8] text-white text-[8px] font-bold px-1.5 py-0.5 rounded">628 msgs · PHP 23.88</span>
                 </div>
               </div>
             </div>
@@ -477,17 +477,17 @@ export default function Page() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-7 gap-2 mt-1">
               {MESSAGING_CAMPAIGNS.map(({ name, cpl, leads, width, highlight }) => (
-                <div key={`${cpl}-${leads}`} className={`rounded-xl p-3 border ${highlight ? 'bg-[#f0f7f3] border-[#c8e6d4]' : 'bg-[#f9f9f7] border-[#e8e8e8]'}`}>
+                <div key={`${cpl}-${leads}`} className={`rounded-xl p-3 border ${highlight ? 'bg-[#eff6ff] border-[#bfdbfe]' : 'bg-[#f9f9f7] border-[#e8e8e8]'}`}>
                   {highlight && (
-                    <div className="text-[8px] font-bold text-[#1a7a4a] uppercase tracking-[0.08em] mb-1">{name}</div>
+                    <div className="text-[8px] font-bold text-[#1d4ed8] uppercase tracking-[0.08em] mb-1">{name}</div>
                   )}
-                  <div className="text-[18px] font-black text-[#1a7a4a] tracking-[-0.02em] leading-none mb-0.5">
+                  <div className="text-[18px] font-black text-[#1d4ed8] tracking-[-0.02em] leading-none mb-0.5">
                     {leads}
                   </div>
                   <div className="text-[9px] text-[#aaa] font-medium mb-2">msgs</div>
                   <div className="h-1 bg-[#e0e0e0] rounded-full overflow-hidden mb-1.5">
                     <div
-                      className="h-full rounded-full bg-gradient-to-r from-[#1a7a4a] to-[#4fc98a]"
+                      className="h-full rounded-full bg-gradient-to-r from-[#1d4ed8] to-[#60a5fa]"
                       style={{ width }}
                     />
                   </div>
@@ -502,7 +502,7 @@ export default function Page() {
       {/* SERVICES */}
       <section id="services" className="bg-white border-t border-b border-[#e8e8e8] px-6 md:px-10 py-10">
         <FadeIn>
-          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1a7a4a] mb-4">
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1d4ed8] mb-4">
             What I Do
           </p>
           <h2 className="text-2xl font-extrabold text-[#111] tracking-tight mb-1.5">Services</h2>
@@ -518,8 +518,8 @@ export default function Page() {
               delay={i * 0.07}
               className="bg-[#f9f9f7] border border-[#e8e8e8] rounded-2xl p-6"
             >
-              <div className="w-9 h-9 rounded-lg bg-[#f0f7f3] border border-[#c8e6d4] flex items-center justify-center mb-3.5">
-                <Icon size={16} strokeWidth={1.5} className="text-[#1a7a4a]" />
+              <div className="w-9 h-9 rounded-lg bg-[#eff6ff] border border-[#bfdbfe] flex items-center justify-center mb-3.5">
+                <Icon size={16} strokeWidth={1.5} className="text-[#1d4ed8]" />
               </div>
               <h3 className="text-sm font-extrabold text-[#111] mb-1.5">{title}</h3>
               <p className="text-xs text-[#777] leading-relaxed mb-3">{desc}</p>
@@ -527,7 +527,7 @@ export default function Page() {
                 {tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[10px] font-semibold text-[#1a7a4a] bg-[#f0f7f3] border border-[#c8e6d4] px-2 py-0.5 rounded"
+                    className="text-[10px] font-semibold text-[#1d4ed8] bg-[#eff6ff] border border-[#bfdbfe] px-2 py-0.5 rounded"
                   >
                     {tag}
                   </span>
@@ -541,7 +541,7 @@ export default function Page() {
       {/* CASE STUDIES */}
       <section id="work" className="px-6 md:px-10 py-10">
         <FadeIn>
-          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1a7a4a] mb-4">
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1d4ed8] mb-4">
             Featured Work
           </p>
           <h2 className="text-2xl font-extrabold text-[#111] tracking-tight mb-1.5">Case Studies</h2>
@@ -569,7 +569,7 @@ export default function Page() {
                 </span>
               </div>
               <div className="p-4">
-                <div className="text-[22px] font-black text-[#1a7a4a] tracking-[-0.03em] mb-0.5">
+                <div className="text-[22px] font-black text-[#1d4ed8] tracking-[-0.03em] mb-0.5">
                   {num}
                 </div>
                 <h3 className="text-[13px] font-bold text-[#111] mb-1.5">{title}</h3>
@@ -578,7 +578,7 @@ export default function Page() {
                   {tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[9px] font-semibold text-[#1a7a4a] bg-[#f0f7f3] border border-[#c8e6d4] px-1.5 py-0.5 rounded"
+                      className="text-[9px] font-semibold text-[#1d4ed8] bg-[#eff6ff] border border-[#bfdbfe] px-1.5 py-0.5 rounded"
                     >
                       {tag}
                     </span>
@@ -593,7 +593,7 @@ export default function Page() {
       {/* TESTIMONIALS */}
       <section className="bg-white border-t border-b border-[#e8e8e8] px-6 md:px-10 py-10">
         <FadeIn>
-          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1a7a4a] mb-4">
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1d4ed8] mb-4">
             Social Proof
           </p>
           <h2 className="text-2xl font-extrabold text-[#111] tracking-tight mb-1.5">
@@ -608,7 +608,7 @@ export default function Page() {
               <p className="text-[12px] text-amber-400 tracking-widest mb-2.5">★★★★★</p>
               <p className="text-xs text-[#777] leading-relaxed mb-3.5 italic">{text}</p>
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-[#f0f7f3] border border-[#c8e6d4] flex items-center justify-center text-[13px] font-bold text-[#1a7a4a] flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#eff6ff] border border-[#bfdbfe] flex items-center justify-center text-[13px] font-bold text-[#1d4ed8] flex-shrink-0">
                   {init}
                 </div>
                 <div>
@@ -624,7 +624,7 @@ export default function Page() {
       {/* ABOUT */}
       <section id="about" className="px-6 md:px-10 py-10">
         <FadeIn>
-          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1a7a4a] mb-4">
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1d4ed8] mb-4">
             Background
           </p>
           <h2 className="text-2xl font-extrabold text-[#111] tracking-tight mb-1.5">About Eron</h2>
@@ -662,7 +662,7 @@ export default function Page() {
                   key={label}
                   className="flex items-center gap-2.5 px-3 py-3 bg-[#f9f9f7] rounded-lg border border-[#e8e8e8]"
                 >
-                  <Icon size={15} strokeWidth={1.5} className="text-[#1a7a4a] flex-shrink-0" />
+                  <Icon size={15} strokeWidth={1.5} className="text-[#1d4ed8] flex-shrink-0" />
                   <div>
                     <p className="text-[10px] text-[#777] font-medium">{label}</p>
                     <p className="text-[13px] font-bold text-[#111]">{value}</p>
@@ -681,7 +681,7 @@ export default function Page() {
             Let's Work Together
           </p>
           <h2 className="text-[32px] font-black text-white tracking-[-0.03em] mb-2 leading-tight">
-            Ready to scale your <span className="text-[#4fc98a]">ad results?</span>
+            Ready to scale your <span className="text-[#60a5fa]">ad results?</span>
           </h2>
           <p className="text-[14px] text-white/45 mb-7">
             Book a free strategy call. No commitment, just results.
@@ -691,7 +691,7 @@ export default function Page() {
               href="https://wa.me/639559413969?text=Hi%20Eron!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20working%20with%20you."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#4fc98a] text-black text-[13px] font-extrabold px-6 py-3 rounded-lg active:scale-[0.98] transition-transform"
+              className="inline-flex items-center gap-2 bg-[#60a5fa] text-black text-[13px] font-extrabold px-6 py-3 rounded-lg active:scale-[0.98] transition-transform"
             >
               Book a Free Strategy Call
               <ArrowRight size={14} strokeWidth={2.5} />
