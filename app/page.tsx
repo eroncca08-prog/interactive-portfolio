@@ -310,7 +310,7 @@ export default function Page() {
             <div className="space-y-3">
               {[
                 { label: 'Impressions', val: '2.96M', pct: '100%', bg: '#e0e0e0', accent: false },
-                { label: 'People Reached', val: '2.07M', pct: '70%', bg: '#a8d5be', accent: false },
+                { label: 'People Reached', val: '2.07M', pct: '70%', bg: '#93c5fd', accent: false },
                 { label: 'Leads Generated', val: '35,869', pct: '17%', bg: '#1d4ed8', accent: true },
               ].map(({ label, val, pct, bg, accent }) => (
                 <div key={label}>
@@ -555,7 +555,7 @@ export default function Page() {
               delay={i * 0.08}
               className="bg-white border border-[#e8e8e8] rounded-2xl overflow-hidden"
             >
-              <div className="h-[120px] bg-gradient-to-br from-[#e8f5ee] to-[#d0ebe0] relative border-b border-[#e8e8e8]">
+              <div className="h-[120px] bg-gradient-to-br from-[#eff6ff] to-[#dbeafe] relative border-b border-[#e8e8e8]">
                 <img
                   src={img}
                   alt={title}
