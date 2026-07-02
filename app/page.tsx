@@ -549,26 +549,16 @@ export default function Page() {
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {CASE_STUDIES.map(({ img, category, num, title, desc, tags }, i) => (
+          {CASE_STUDIES.map(({ category, num, title, desc, tags }, i) => (
             <FadeIn
               key={title}
               delay={i * 0.08}
               className="bg-white border border-[#e8e8e8] rounded-2xl overflow-hidden"
             >
-              <div className="h-[120px] bg-gradient-to-br from-[#eff6ff] to-[#dbeafe] relative border-b border-[#e8e8e8]">
-                <img
-                  src={img}
-                  alt={title}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    ;(e.target as HTMLImageElement).style.display = 'none'
-                  }}
-                />
-                <span className="absolute top-2.5 right-2.5 bg-white/90 border border-[#e8e8e8] text-[9px] font-bold text-[#777] px-2 py-1 rounded-full uppercase tracking-[0.05em]">
+              <div className="p-4 pt-5">
+                <span className="inline-block bg-[#f5f5f3] border border-[#e8e8e8] text-[9px] font-bold text-[#777] px-2 py-1 rounded-full uppercase tracking-[0.05em] mb-3">
                   {category}
                 </span>
-              </div>
-              <div className="p-4">
                 <div className="text-[22px] font-black text-[#1d4ed8] tracking-[-0.03em] mb-0.5">
                   {num}
                 </div>
@@ -588,6 +578,44 @@ export default function Page() {
             </FadeIn>
           ))}
         </div>
+      </section>
+
+      {/* PHOTO GALLERY */}
+      <section className="px-6 md:px-10 pb-10">
+        <FadeIn>
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase text-[#1d4ed8] mb-4">
+            Campaign Photos
+          </p>
+          <h2 className="text-2xl font-extrabold text-[#111] tracking-tight mb-1.5">Awards & Results</h2>
+          <p className="text-sm text-[#777] font-medium mb-7">On-ground proof from 3 years of campaigns</p>
+        </FadeIn>
+        <FadeIn delay={0.05}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+            {[
+              '/screenshots/awards3.jpg',
+              '/screenshots/awardss.jpg',
+              '/screenshots/awards4.jpg',
+              '/screenshots/client1123123123.jpg',
+              '/screenshots/awards2.jpg',
+              '/screenshots/awrasdasdas.jpg',
+              '/screenshots/client11231312.jpg',
+              '/screenshots/client13123.jpg',
+            ].map((src, i) => (
+              <div
+                key={i}
+                className="rounded-xl overflow-hidden border border-[#e8e8e8] bg-[#f0f0ee]"
+                style={{ height: '360px' }}
+              >
+                <img
+                  src={src}
+                  alt=""
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 50%' }}
+                />
+              </div>
+            ))}
+          </div>
+        </FadeIn>
       </section>
 
       {/* TESTIMONIALS */}
